@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "epistemic-sdk"
+version = "0.1.0"
+description = "Typed epistemic interfaces and finite Boolean program discovery"
+requires-python = ">=3.10"
+dependencies = []
+[project.scripts]
+epistemic-demo = "epistemic.__main__:main"
+[tool.setuptools.packages.find]
+include = ["epistemic*"]

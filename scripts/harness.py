@@ -35,6 +35,7 @@ PUBLIC_EXPORTS = (
     "ProgramRunner", "ValidationStatus", "ValidationReport", "Validator",
     "KnowledgeStatus", "Knowledge", "KnowledgeBase", "KnowledgeReviser",
     "EpistemicEngine",
+    "ExperimentSelector",
 )
 
 

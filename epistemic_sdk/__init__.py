@@ -18,6 +18,7 @@ from .execution.program_runner import ProgramRunner
 from .execution.program_transformation import ProgramTransformation
 from .execution.result_transformation import ResultTransformation
 from .execution.transformation_pipeline import TransformationPipeline
+from .inference.experiment_selector import ExperimentSelector
 from .inference.inference_engine import InferenceEngine
 from .knowledge.knowledge import Knowledge
 from .knowledge.knowledge_base import KnowledgeBase
@@ -58,6 +59,7 @@ __all__ = [
     "ExecutionContext",
     "ExecutionResult",
     "Executor",
+    "ExperimentSelector",
     "Hypothesis",
     "InferenceEngine",
     "InferenceMode",

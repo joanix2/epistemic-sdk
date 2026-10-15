@@ -38,6 +38,16 @@ Le bon programme peut être isolé dans un espace de recherche immense, **sans g
 
 L'expérience booléenne (`examples/boolean_operator_discovery/`) teste surtout la **découverte**, la **composition** et la **réfutation**. Elle **ne résout pas encore** le problème général de la recherche dans un espace de programmes arbitraires.
 
+## Boucle épistémique active
+
+Au-delà de la boucle passive (les observations sont données), le SDK vise une boucle **active** : la connaissance reconfigure la politique expérimentale.
+
+- Deux distributions couplées : `P(H | D)` sur les hypothèses et `P(E | D)` sur les expériences à mener.
+- Un contre-exemple ne fait pas que baisser `P(H)` : il **réoriente** `P(E)` — où chercher ensuite.
+- Sélection d'expérience : `e* = argmax_e E[I(H ; Y_e)]` (information mutuelle attendue) ; sur domaine fini, un proxy de désaccord suffit.
+- Contrôleur supérieur `{tester, explorer, abduire}` : si toutes les hypothèses échouent, `P(abduire)` monte — élargir l'espace `H` (problème #4).
+- `Belief.confidence` est la graine de `P(H)` ; le port `ExperimentSelector` est le mécanisme de `P(E)`.
+
 ## Carte des modules
 
 | Module | Responsabilité | Agent |
@@ -47,7 +57,7 @@ L'expérience booléenne (`examples/boolean_operator_discovery/`) teste surtout 
 | `epistemic_sdk/m1/` | `ProgramM1`, `Hypothesis`, `InferenceMode` | inference |
 | `epistemic_sdk/observations/` | `Observation` (provenance), `Sensor` | observations |
 | `epistemic_sdk/beliefs/` | `Belief`, `BeliefGraph`, `Relation`, `BeliefUpdater` | beliefs |
-| `epistemic_sdk/inference/` | `InferenceEngine` (abduction/induction/déduction) | inference |
+| `epistemic_sdk/inference/` | `InferenceEngine` (abduction/induction/déduction), `ExperimentSelector` (boucle active) | inference |
 | `epistemic_sdk/execution/` | `ProgramTransformation`, `ResultTransformation`, `TransformationPipeline` | transformations |
 | `epistemic_sdk/execution/` | `Executor`, `ProgramRunner`, `ExecutionContext`, `ExecutionResult` | execution |
 | `epistemic_sdk/validation/` | `Validator`, `ValidationReport`, `ValidationStatus` | validation |
@@ -69,6 +79,7 @@ L'expérience booléenne (`examples/boolean_operator_discovery/`) teste surtout 
 8. Transformation de programme et transformation de résultat sont deux étapes distinctes.
 9. La validation porte sur des résultats d'exécution confrontés à des observations **indépendantes** (aucune fuite entraînement/test).
 10. Toute connaissance préserve la provenance de ses hypothèses, exécutions et validations.
+11. Une connaissance n'est pas seulement une croyance ; elle détermine quelles observations valent la peine d'être recherchées.
 
 ## Conventions Python et typage
 

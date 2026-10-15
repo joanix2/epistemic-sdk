@@ -1,7 +1,9 @@
 """Epistemic SDK: contracts for a revisable, Maude-inspired epistemic loop.
 
-Version 0.1.0. No Maude interpreter is included.
+No Maude interpreter is included.
 """
+
+__version__ = "0.1.0"
 
 from .beliefs.belief import Belief
 from .beliefs.belief_graph import BeliefGraph

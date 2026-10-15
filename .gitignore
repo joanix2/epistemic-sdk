@@ -9,3 +9,5 @@ dist/
 runs/
 .cache/
 graphify-out/
+.vscode/
+.omo/

@@ -12,6 +12,9 @@ dependencies = []
 z3 = [
     "z3-solver>=5.3.0.0",
 ]
+mlp = [
+    "scikit-learn>=1.7.2",
+]
 
 [tool.setuptools.packages.find]
 include = ["epistemic*"]

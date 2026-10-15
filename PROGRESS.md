@@ -28,6 +28,12 @@ by family:
 participation: crop 3, diagonal 2, flip 3, recolor 4, rotation 3, scale 3
 ```
 
+## Plafond des transformations globales (résultat négatif documenté)
+
+Une bibliothèque élargie de transformations **unaires** évaluée seule (train+test) plafonne à une **union de 15 tâches** — moins que les 16 obtenues par compositions : `rot180` 2, `transpose` 2, `mirror_h` 2, `mirror_v` 2, `rot270/flip_h/flip_v/crop_bbox/gravity_down/upscale2/upscale3` 1 chacun. Les opérateurs paramétrés testés (`crop_color{c}`, `keep_color{c}`, `remove_color{c}`, `replace_bg{c}`, `downscale{2,3}`, `outline`) n'ajoutent **aucune** tâche.
+
+Conclusion : l'espace des transformations globales est épuisé autour de ~4 %. Progresser exige le **raisonnement au niveau objet** (sélection d'objet, complétion de symétrie, règles conditionnées par la couleur/forme) — un changement de langage M2, pas un ajout d'opérateur.
+
 ## Prochaines étapes (objectif de nuit)
 
 1. **Augmenter la couverture** : transformations paramétrées (facteur variable, recoloriage conditionnel), sélection d'objet / crop vers une couleur cible. Mesurer après chaque ajout ; documenter les échecs (règle des 3 échecs).

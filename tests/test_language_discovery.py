@@ -150,7 +150,7 @@ class FuzzyTests(unittest.TestCase):
                 0.75,
             ),
         }
-        for name, (fn, training, test_inputs, test_output) in cases.items():
+        for name, (_fn, training, test_inputs, test_output) in cases.items():
             with self.subTest(function=name):
                 result = discovery.discover(training, test_inputs, test_output)
                 self.assertIsNotNone(result.program)

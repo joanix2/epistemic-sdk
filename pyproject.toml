@@ -8,6 +8,11 @@ description = "Typed epistemic interfaces and finite Boolean program discovery"
 requires-python = ">=3.10"
 dependencies = []
 
+[project.optional-dependencies]
+z3 = [
+    "z3-solver>=5.3.0.0",
+]
+
 [tool.setuptools.packages.find]
 include = ["epistemic*"]
 

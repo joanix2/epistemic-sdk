@@ -1,5 +1,8 @@
-from typing import Any, Protocol, Sequence, TypeVar
+from collections.abc import Sequence
+from typing import Any, Protocol, TypeVar
+
 from epistemic_sdk.observations.observation import Observation
+
 from .belief_graph import BeliefGraph
 
 S = TypeVar("S")

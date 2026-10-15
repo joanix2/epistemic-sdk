@@ -1,4 +1,5 @@
 from typing import Protocol, TypeVar
+
 from .execution_context import ExecutionContext
 
 P = TypeVar("P", contravariant=True)

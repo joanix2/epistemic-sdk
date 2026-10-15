@@ -1,5 +1,7 @@
 from dataclasses import dataclass
+
 from .relation_type import RelationType
+
 
 @dataclass(frozen=True)
 class Relation:

@@ -1,7 +1,9 @@
 from dataclasses import dataclass
+
 from epistemic_sdk.m3.axiom import Axiom
 from epistemic_sdk.m3.operator import Operator
 from epistemic_sdk.m3.sort import Sort
+
 
 @dataclass(frozen=True)
 class LanguageM2:

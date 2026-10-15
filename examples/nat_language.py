@@ -3,9 +3,17 @@
 Defines a theory, not a Maude runtime. Run: python -m examples.nat_language
 """
 from epistemic_sdk import (
-    Application, Axiom, Equation, Hypothesis, LanguageM2,
-    Operator, ProgramM1, RewriteRule, Sort, Variable,
+    Application,
+    Axiom,
+    Equation,
+    Hypothesis,
     InferenceMode,
+    LanguageM2,
+    Operator,
+    ProgramM1,
+    RewriteRule,
+    Sort,
+    Variable,
 )
 
 X = Variable("X", "Nat")

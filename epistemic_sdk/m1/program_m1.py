@@ -1,6 +1,8 @@
 from dataclasses import dataclass
-from epistemic_sdk.m3.term import Term
+
 from epistemic_sdk.m3.rewrite_rule import RewriteRule
+from epistemic_sdk.m3.term import Term
+
 
 @dataclass(frozen=True)
 class ProgramM1:

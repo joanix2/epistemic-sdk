@@ -1,146 +1,94 @@
 [
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "runpy",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "importPath": "runpy",
+        "description": "runpy",
+        "detail": "runpy",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "field",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "annotations",
+        "importPath": "__future__",
+        "description": "__future__",
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "detail": "__future__",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "os",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "site",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "dataclasses",
+        "importPath": "site",
+        "description": "site",
+        "detail": "site",
         "documentation": {}
     },
     {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
+        "label": "sys",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
-        "documentation": {}
-    },
-    {
-        "label": "dataclass",
-        "importPath": "dataclasses",
-        "description": "dataclasses",
-        "isExtraImport": true,
-        "detail": "dataclasses",
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -192,6 +140,150 @@
         "documentation": {}
     },
     {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "field",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
+        "label": "dataclass",
+        "importPath": "dataclasses",
+        "description": "dataclasses",
+        "isExtraImport": true,
+        "detail": "dataclasses",
+        "documentation": {}
+    },
+    {
         "label": "Generic",
         "importPath": "typing",
         "description": "typing",
@@ -248,14 +340,6 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "TypeVar",
         "importPath": "typing",
         "description": "typing",
@@ -280,14 +364,6 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "TypeVar",
         "importPath": "typing",
         "description": "typing",
@@ -304,14 +380,6 @@
         "documentation": {}
     },
     {
-        "label": "Mapping",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "Generic",
         "importPath": "typing",
         "description": "typing",
@@ -352,14 +420,6 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "TypeVar",
         "importPath": "typing",
         "description": "typing",
@@ -417,14 +477,6 @@
     },
     {
         "label": "Protocol",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -473,14 +525,6 @@
     },
     {
         "label": "Protocol",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -552,14 +596,6 @@
         "documentation": {}
     },
     {
-        "label": "Mapping",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "TypeVar",
         "importPath": "typing",
         "description": "typing",
@@ -569,14 +605,6 @@
     },
     {
         "label": "Protocol",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Sequence",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -608,14 +636,6 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
         "label": "TypeVar",
         "importPath": "typing",
         "description": "typing",
@@ -656,11 +676,75 @@
         "documentation": {}
     },
     {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
         "isExtraImport": true,
-        "detail": "enum",
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Mapping",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Mapping",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "collections.abc",
+        "description": "collections.abc",
+        "isExtraImport": true,
+        "detail": "collections.abc",
         "documentation": {}
     },
     {
@@ -688,43 +772,11 @@
         "documentation": {}
     },
     {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
         "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
-        "documentation": {}
-    },
-    {
-        "label": "annotations",
-        "importPath": "__future__",
-        "description": "__future__",
-        "isExtraImport": true,
-        "detail": "__future__",
+        "detail": "enum",
         "documentation": {}
     },
     {
@@ -832,19 +884,19 @@
         "documentation": {}
     },
     {
-        "label": "Term",
-        "importPath": "epistemic_sdk.m3.term",
-        "description": "epistemic_sdk.m3.term",
-        "isExtraImport": true,
-        "detail": "epistemic_sdk.m3.term",
-        "documentation": {}
-    },
-    {
         "label": "RewriteRule",
         "importPath": "epistemic_sdk.m3.rewrite_rule",
         "description": "epistemic_sdk.m3.rewrite_rule",
         "isExtraImport": true,
         "detail": "epistemic_sdk.m3.rewrite_rule",
+        "documentation": {}
+    },
+    {
+        "label": "Term",
+        "importPath": "epistemic_sdk.m3.term",
+        "description": "epistemic_sdk.m3.term",
+        "isExtraImport": true,
+        "detail": "epistemic_sdk.m3.term",
         "documentation": {}
     },
     {
@@ -952,6 +1004,14 @@
         "documentation": {}
     },
     {
+        "label": "InferenceMode",
+        "importPath": "epistemic_sdk",
+        "description": "epistemic_sdk",
+        "isExtraImport": true,
+        "detail": "epistemic_sdk",
+        "documentation": {}
+    },
+    {
         "label": "LanguageM2",
         "importPath": "epistemic_sdk",
         "description": "epistemic_sdk",
@@ -1000,22 +1060,6 @@
         "documentation": {}
     },
     {
-        "label": "InferenceMode",
-        "importPath": "epistemic_sdk",
-        "description": "epistemic_sdk",
-        "isExtraImport": true,
-        "detail": "epistemic_sdk",
-        "documentation": {}
-    },
-    {
-        "label": "Application",
-        "importPath": "epistemic_sdk",
-        "description": "epistemic_sdk",
-        "isExtraImport": true,
-        "detail": "epistemic_sdk",
-        "documentation": {}
-    },
-    {
         "label": "BeliefGraph",
         "importPath": "epistemic_sdk",
         "description": "epistemic_sdk",
@@ -1025,14 +1069,6 @@
     },
     {
         "label": "ExecutionContext",
-        "importPath": "epistemic_sdk",
-        "description": "epistemic_sdk",
-        "isExtraImport": true,
-        "detail": "epistemic_sdk",
-        "documentation": {}
-    },
-    {
-        "label": "Hypothesis",
         "importPath": "epistemic_sdk",
         "description": "epistemic_sdk",
         "isExtraImport": true,
@@ -1080,6 +1116,59 @@
         "documentation": {}
     },
     {
+        "label": "argparse",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "argparse",
+        "description": "argparse",
+        "detail": "argparse",
+        "documentation": {}
+    },
+    {
+        "label": "hashlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "hashlib",
+        "description": "hashlib",
+        "detail": "hashlib",
+        "documentation": {}
+    },
+    {
+        "label": "importlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "importlib",
+        "description": "importlib",
+        "detail": "importlib",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
         "label": "unittest",
         "kind": 6,
         "isExtraImport": true,
@@ -1102,6 +1191,87 @@
         "description": "examples.nat_language",
         "isExtraImport": true,
         "detail": "examples.nat_language",
+        "documentation": {}
+    },
+    {
+        "label": "bin_dir",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "bin_dir = os.path.dirname(abs_file)\nbase = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"epistemic-sdk\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "base",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "base = bin_dir[: -len(\"bin\") - 1]  # strip away the bin part from the __file__, plus the path separator\n# prepend bin to PATH (this file is inside the bin directory)\nos.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"epistemic-sdk\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"PATH\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"PATH\"] = os.pathsep.join([bin_dir, *os.environ.get(\"PATH\", \"\").split(os.pathsep)])\nos.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"epistemic-sdk\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV\"] = base  # virtual env is right above bin directory\nos.environ[\"VIRTUAL_ENV_PROMPT\"] = \"epistemic-sdk\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "os.environ[\"VIRTUAL_ENV_PROMPT\"]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "os.environ[\"VIRTUAL_ENV_PROMPT\"] = \"epistemic-sdk\" or os.path.basename(base)  # noqa: SIM222\n# add the virtual environments libraries to the host python import mechanism\nprev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "prev_length",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "prev_length = len(sys.path)\nfor lib in \"../lib/python3.12/site-packages\".split(os.pathsep):\n    path = os.path.realpath(os.path.join(bin_dir, lib))\n    site.addsitedir(path)\nsys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[:]",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.path[:] = sys.path[prev_length:] + sys.path[0:prev_length]\nsys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.real_prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.real_prefix = sys.prefix\nsys.prefix = base",
+        "detail": ".venv.bin.activate_this",
+        "documentation": {}
+    },
+    {
+        "label": "sys.prefix",
+        "kind": 5,
+        "importPath": ".venv.bin.activate_this",
+        "description": ".venv.bin.activate_this",
+        "peekOfCode": "sys.prefix = base",
+        "detail": ".venv.bin.activate_this",
         "documentation": {}
     },
     {
@@ -1568,7 +1738,7 @@
         "kind": 6,
         "importPath": "epistemic_sdk.observations.sensor",
         "description": "epistemic_sdk.observations.sensor",
-        "peekOfCode": "class Sensor(Protocol[V]):\n    \"\"\"Transform the external environment into recorded observations.\"\"\"\n    def observe(self) -> Sequence[Observation[V]]:\n        ...",
+        "peekOfCode": "class Sensor(Protocol[V]):\n    \"\"\"Transform the external environment into recorded observations.\n    Invariant in ``V``: ``Observation`` is an invariant dataclass.\n    \"\"\"\n    def observe(self) -> Sequence[Observation[V]]:\n        ...",
         "detail": "epistemic_sdk.observations.sensor",
         "documentation": {}
     },
@@ -1577,7 +1747,7 @@
         "kind": 5,
         "importPath": "epistemic_sdk.observations.sensor",
         "description": "epistemic_sdk.observations.sensor",
-        "peekOfCode": "V = TypeVar(\"V\", covariant=True)\nclass Sensor(Protocol[V]):\n    \"\"\"Transform the external environment into recorded observations.\"\"\"\n    def observe(self) -> Sequence[Observation[V]]:\n        ...",
+        "peekOfCode": "V = TypeVar(\"V\")\nclass Sensor(Protocol[V]):\n    \"\"\"Transform the external environment into recorded observations.\n    Invariant in ``V``: ``Observation`` is an invariant dataclass.\n    \"\"\"\n    def observe(self) -> Sequence[Observation[V]]:\n        ...",
         "detail": "epistemic_sdk.observations.sensor",
         "documentation": {}
     },
@@ -1604,7 +1774,7 @@
         "kind": 6,
         "importPath": "epistemic_sdk.validation.validator",
         "description": "epistemic_sdk.validation.validator",
-        "peekOfCode": "class Validator(Protocol[P, R]):\n    \"\"\"Compare execution predictions with actual independent observations.\"\"\"\n    def validate(\n        self,\n        result: ExecutionResult[P, R],\n        observations: Sequence[Observation[Any]],\n    ) -> ValidationReport:\n        ...",
+        "peekOfCode": "class Validator(Protocol[P, R]):\n    \"\"\"Compare execution predictions with actual independent observations.\n    Invariant in ``P``/``R``: ``ExecutionResult`` is an invariant dataclass, so\n    this port cannot be contravariant even though ``validate`` only consumes it.\n    \"\"\"\n    def validate(\n        self,\n        result: ExecutionResult[P, R],\n        observations: Sequence[Observation[Any]],\n    ) -> ValidationReport:",
         "detail": "epistemic_sdk.validation.validator",
         "documentation": {}
     },
@@ -1613,7 +1783,7 @@
         "kind": 5,
         "importPath": "epistemic_sdk.validation.validator",
         "description": "epistemic_sdk.validation.validator",
-        "peekOfCode": "P = TypeVar(\"P\", contravariant=True)\nR = TypeVar(\"R\", contravariant=True)\nclass Validator(Protocol[P, R]):\n    \"\"\"Compare execution predictions with actual independent observations.\"\"\"\n    def validate(\n        self,\n        result: ExecutionResult[P, R],\n        observations: Sequence[Observation[Any]],\n    ) -> ValidationReport:\n        ...",
+        "peekOfCode": "P = TypeVar(\"P\")\nR = TypeVar(\"R\")\nclass Validator(Protocol[P, R]):\n    \"\"\"Compare execution predictions with actual independent observations.\n    Invariant in ``P``/``R``: ``ExecutionResult`` is an invariant dataclass, so\n    this port cannot be contravariant even though ``validate`` only consumes it.\n    \"\"\"\n    def validate(\n        self,\n        result: ExecutionResult[P, R],",
         "detail": "epistemic_sdk.validation.validator",
         "documentation": {}
     },
@@ -1622,7 +1792,7 @@
         "kind": 5,
         "importPath": "epistemic_sdk.validation.validator",
         "description": "epistemic_sdk.validation.validator",
-        "peekOfCode": "R = TypeVar(\"R\", contravariant=True)\nclass Validator(Protocol[P, R]):\n    \"\"\"Compare execution predictions with actual independent observations.\"\"\"\n    def validate(\n        self,\n        result: ExecutionResult[P, R],\n        observations: Sequence[Observation[Any]],\n    ) -> ValidationReport:\n        ...",
+        "peekOfCode": "R = TypeVar(\"R\")\nclass Validator(Protocol[P, R]):\n    \"\"\"Compare execution predictions with actual independent observations.\n    Invariant in ``P``/``R``: ``ExecutionResult`` is an invariant dataclass, so\n    this port cannot be contravariant even though ``validate`` only consumes it.\n    \"\"\"\n    def validate(\n        self,\n        result: ExecutionResult[P, R],\n        observations: Sequence[Observation[Any]],",
         "detail": "epistemic_sdk.validation.validator",
         "documentation": {}
     },
@@ -1687,6 +1857,69 @@
         "description": "examples.nat_language",
         "peekOfCode": "EXAMPLE = Hypothesis(\n    id=\"H1\",\n    program=ProgramM1(\n        language_id=\"nat\", language_version=\"1.0.0\",\n        entrypoint=add(succ(ZERO), ZERO),\n        candidate_rules=(RewriteRule(add(X, ZERO), X),),\n    ),\n    inference_mode=InferenceMode.INDUCTION,\n)\nif __name__ == \"__main__\":",
         "detail": "examples.nat_language",
+        "documentation": {}
+    },
+    {
+        "label": "cmd_check",
+        "kind": 2,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "def cmd_check(_: argparse.Namespace) -> int:\n    errors: list[str] = []\n    try:\n        pkg = importlib.import_module(\"epistemic_sdk\")\n    except Exception as exc:  # noqa: BLE001\n        print(f\"FAIL: cannot import epistemic_sdk: {exc}\")\n        return 1\n    version = getattr(pkg, \"__version__\", None)\n    print(f\"epistemic_sdk version: {version or 'unknown'}\")\n    missing = [name for name in PUBLIC_EXPORTS if not hasattr(pkg, name)]",
+        "detail": "scripts.harness",
+        "documentation": {}
+    },
+    {
+        "label": "cmd_run",
+        "kind": 2,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "def cmd_run(args: argparse.Namespace) -> int:\n    fingerprint = _fingerprint()\n    cache = _load_cache()\n    if (\n        not args.no_cache\n        and cache.get(\"fingerprint\") == fingerprint\n        and cache.get(\"exit_code\") == 0\n    ):\n        print(\"cache hit: tests already passed for this fingerprint; skipping.\")\n        print(\"(use --no-cache to force execution)\")",
+        "detail": "scripts.harness",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "def main() -> int:\n    parser = argparse.ArgumentParser(description=\"Epistemic SDK dev harness\")\n    sub = parser.add_subparsers(dest=\"command\", required=True)\n    sub.add_parser(\"check\", help=\"static checks: imports and public interface\")\n    run_parser = sub.add_parser(\"run\", help=\"run the test suite (dev-cache aware)\")\n    run_parser.add_argument(\n        \"--no-cache\", action=\"store_true\", help=\"force execution, bypass cache\"\n    )\n    args = parser.parse_args()\n    if args.command == \"check\":",
+        "detail": "scripts.harness",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT",
+        "kind": 5,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "ROOT = Path(__file__).resolve().parent.parent\nsys.path.insert(0, str(ROOT))\nCACHE_DIR = ROOT / \".cache\"\nCACHE_FILE = CACHE_DIR / \"harness.json\"\nPUBLIC_EXPORTS = (\n    \"Sort\", \"Operator\", \"Variable\", \"Constant\", \"Application\", \"Term\",\n    \"Equation\", \"Membership\", \"RewriteRule\", \"Statement\", \"Axiom\",\n    \"MetaExecution\", \"ReflectiveM3\", \"LanguageM2\", \"ProgramM1\",\n    \"InferenceMode\", \"Hypothesis\", \"Observation\", \"Sensor\", \"Belief\",\n    \"Relation\", \"RelationType\", \"BeliefGraph\", \"BeliefUpdater\",",
+        "detail": "scripts.harness",
+        "documentation": {}
+    },
+    {
+        "label": "CACHE_DIR",
+        "kind": 5,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "CACHE_DIR = ROOT / \".cache\"\nCACHE_FILE = CACHE_DIR / \"harness.json\"\nPUBLIC_EXPORTS = (\n    \"Sort\", \"Operator\", \"Variable\", \"Constant\", \"Application\", \"Term\",\n    \"Equation\", \"Membership\", \"RewriteRule\", \"Statement\", \"Axiom\",\n    \"MetaExecution\", \"ReflectiveM3\", \"LanguageM2\", \"ProgramM1\",\n    \"InferenceMode\", \"Hypothesis\", \"Observation\", \"Sensor\", \"Belief\",\n    \"Relation\", \"RelationType\", \"BeliefGraph\", \"BeliefUpdater\",\n    \"InferenceEngine\", \"ProgramTransformation\", \"TransformationPipeline\",\n    \"ResultTransformation\", \"ExecutionContext\", \"Executor\", \"ExecutionResult\",",
+        "detail": "scripts.harness",
+        "documentation": {}
+    },
+    {
+        "label": "CACHE_FILE",
+        "kind": 5,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "CACHE_FILE = CACHE_DIR / \"harness.json\"\nPUBLIC_EXPORTS = (\n    \"Sort\", \"Operator\", \"Variable\", \"Constant\", \"Application\", \"Term\",\n    \"Equation\", \"Membership\", \"RewriteRule\", \"Statement\", \"Axiom\",\n    \"MetaExecution\", \"ReflectiveM3\", \"LanguageM2\", \"ProgramM1\",\n    \"InferenceMode\", \"Hypothesis\", \"Observation\", \"Sensor\", \"Belief\",\n    \"Relation\", \"RelationType\", \"BeliefGraph\", \"BeliefUpdater\",\n    \"InferenceEngine\", \"ProgramTransformation\", \"TransformationPipeline\",\n    \"ResultTransformation\", \"ExecutionContext\", \"Executor\", \"ExecutionResult\",\n    \"ProgramRunner\", \"ValidationStatus\", \"ValidationReport\", \"Validator\",",
+        "detail": "scripts.harness",
+        "documentation": {}
+    },
+    {
+        "label": "PUBLIC_EXPORTS",
+        "kind": 5,
+        "importPath": "scripts.harness",
+        "description": "scripts.harness",
+        "peekOfCode": "PUBLIC_EXPORTS = (\n    \"Sort\", \"Operator\", \"Variable\", \"Constant\", \"Application\", \"Term\",\n    \"Equation\", \"Membership\", \"RewriteRule\", \"Statement\", \"Axiom\",\n    \"MetaExecution\", \"ReflectiveM3\", \"LanguageM2\", \"ProgramM1\",\n    \"InferenceMode\", \"Hypothesis\", \"Observation\", \"Sensor\", \"Belief\",\n    \"Relation\", \"RelationType\", \"BeliefGraph\", \"BeliefUpdater\",\n    \"InferenceEngine\", \"ProgramTransformation\", \"TransformationPipeline\",\n    \"ResultTransformation\", \"ExecutionContext\", \"Executor\", \"ExecutionResult\",\n    \"ProgramRunner\", \"ValidationStatus\", \"ValidationReport\", \"Validator\",\n    \"KnowledgeStatus\", \"Knowledge\", \"KnowledgeBase\", \"KnowledgeReviser\",",
+        "detail": "scripts.harness",
         "documentation": {}
     },
     {

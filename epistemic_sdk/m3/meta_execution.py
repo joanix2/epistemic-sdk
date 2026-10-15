@@ -1,5 +1,7 @@
 from dataclasses import dataclass
+
 from .term import Term
+
 
 @dataclass(frozen=True)
 class MetaExecution:

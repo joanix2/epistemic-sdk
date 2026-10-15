@@ -1,8 +1,12 @@
 from __future__ import annotations
-from typing import Generic, Sequence, TypeVar
+
+from collections.abc import Sequence
+from typing import Generic, TypeVar
 from uuid import uuid4
+
 from epistemic_sdk.m1.hypothesis import Hypothesis
 from epistemic_sdk.m1.program_m1 import ProgramM1
+
 from .execution_context import ExecutionContext
 from .execution_result import ExecutionResult
 from .executor import Executor
@@ -35,8 +39,8 @@ class ProgramRunner(Generic[R]):
             program = transformation.transform(program)
         raw_output = self.executor.execute(program, context)
         output = raw_output
-        for transformation in self.result_transformations:
-            output = transformation.transform(output)
+        for result_transformation in self.result_transformations:
+            output = result_transformation.transform(output)
         return ExecutionResult(
             id=str(uuid4()),
             hypothesis_id=hypothesis.id,

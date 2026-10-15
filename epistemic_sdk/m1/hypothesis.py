@@ -1,6 +1,8 @@
 from dataclasses import dataclass
+
 from .inference_mode import InferenceMode
 from .program_m1 import ProgramM1
+
 
 @dataclass(frozen=True)
 class Hypothesis:

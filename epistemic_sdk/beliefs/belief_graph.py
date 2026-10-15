@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import Any, Generic, TypeVar
+
 from epistemic_sdk.observations.observation import Observation
+
 from .belief import Belief
 from .relation import Relation
 

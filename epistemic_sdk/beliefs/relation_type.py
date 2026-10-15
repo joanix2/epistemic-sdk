@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class RelationType(str, Enum):
     SUPPORTS = "supports"
     CONTRADICTS = "contradicts"

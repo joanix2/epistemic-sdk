@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from datetime import datetime
+
 from .validation_status import ValidationStatus
+
 
 @dataclass(frozen=True)
 class ValidationReport:

@@ -1,4 +1,6 @@
-from typing import Protocol, Sequence, TypeVar
+from collections.abc import Sequence
+from typing import Protocol, TypeVar
+
 from epistemic_sdk.beliefs.belief_graph import BeliefGraph
 from epistemic_sdk.knowledge.knowledge_base import KnowledgeBase
 from epistemic_sdk.m1.hypothesis import Hypothesis

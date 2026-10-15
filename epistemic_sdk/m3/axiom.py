@@ -1,6 +1,8 @@
 from dataclasses import dataclass
 from typing import Literal
+
 from .statement import Statement
+
 
 @dataclass(frozen=True)
 class Axiom:

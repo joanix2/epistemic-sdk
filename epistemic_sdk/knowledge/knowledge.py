@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from typing import Generic, TypeVar
+
 from .knowledge_status import KnowledgeStatus
 
 P = TypeVar("P")

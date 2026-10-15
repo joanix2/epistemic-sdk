@@ -1,8 +1,12 @@
 from __future__ import annotations
+
 from typing import Protocol
+
+from epistemic_sdk.m2.language_m2 import LanguageM2
+
 from .meta_execution import MetaExecution
 from .term import Term
-from epistemic_sdk.m2.language_m2 import LanguageM2
+
 
 class ReflectiveM3(Protocol):
     """Interface for a Maude-inspired reflective rewriting engine.

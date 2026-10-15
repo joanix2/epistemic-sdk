@@ -256,3 +256,24 @@ Plan d'implémentation, organisé par la structure « abduction → transformati
 - **Critère d'acceptation de chaque phase** : la boucle `Sensor → … → KnowledgeBase` doit s'exécuter de bout en bout avec les algos de la phase, sur un domaine fini démontrable (ex. langage booléen ou `nat`).
 
 ### user
+
+Dans la partie transformation, il y a toute la famille des algorithmes comme Prolog à rajouter.
+
+### agent
+
+Exact — la catégorie **transformation** est bien plus large que la simple réécriture Maude. La **programmation logique** (Prolog) en est une famille entière :
+
+| Mécanisme | Rôle | Catégorie | Port SDK |
+|---|---|---|---|
+| **Unification** | appariement structurel de deux termes **avec variables des deux côtés** | Réécriture / transformation | généralise `matches` (qui est unidirectionnel) |
+| **Résolution SLD** | dérivation de conséquences par élimination de clauses | Déduction + transformation | `InferenceEngine` (déduction) |
+| **Backtracking / arbre SLD** | exploration de l'espace de preuve | Optimisation (recherche) | moteur interne |
+| **Règles de réécriture conditionnelles** (CHR, λProlog) | transformation guidée par contraintes | Réécriture | `ProgramTransformation` |
+
+Points clés :
+
+- **Unification vs `matches`** : le SDK a déjà `matches` (pattern sans variable côté terme) ; l'unification est la version **bidirectionnelle** — un composant naturel à ajouter à la lib.
+- **Prolog couvre plusieurs catégories** : la résolution SLD est à la fois *déduction* (dériver) et *transformation* (réécrire des clauses) — un exemple de plus d'un algo multi-catégorie.
+- La famille s'étend au-delà de Prolog : **λProlog**, **CHR** (Constraint Handling Rules), **ASP** (Answer Set Programming) — autant de moteurs de transformation/déduction à piocher selon le besoin.
+
+### user

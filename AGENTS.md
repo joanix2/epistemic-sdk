@@ -23,6 +23,21 @@ Quatre niveaux :
 - **M1** : programmes déclaratifs = hypothèses (`ProgramM1` dans un `LanguageM2`).
 - **M0** : observations, valeurs, résultats d'exécution.
 
+## Objectif principal de l'expérience de validation
+
+L'expérience de validation d'Epistemic SDK cherche à répondre à **trois problèmes fondamentaux** :
+
+1. **Découverte (inférence)** — comment générer une hypothèse, sous forme de programme déclaratif, à partir d'un ensemble limité d'observations, sans connaître la solution à l'avance ?
+2. **Composition (architecture)** — comment faire fonctionner ensemble les composants du SDK (observations, croyances, inférence, transformations, exécution, validation) sans créer de dépendances artificielles ?
+3. **Réfutation (révision des connaissances)** — comment utiliser de nouvelles observations pour identifier des contre-exemples, réfuter les hypothèses incompatibles et réviser les connaissances déjà acquises ?
+4. **Définition du sous-espace de recherche (définition automatique du M2)** — comment définir automatiquement le sous-espace de recherche (le langage M2) dans lequel l'inférence opère, plutôt que de le fixer manuellement ?
+
+### Problème plus profond : l'émergence
+
+Le bon programme peut être isolé dans un espace de recherche immense, **sans gradient** permettant de s'en approcher progressivement. C'est précisément pourquoi on a décidé de **fixer M2** et de commencer avec un espace de programmes limité, avant de permettre au système de faire évoluer ses propres langages.
+
+L'expérience booléenne (`examples/boolean_operator_discovery/`) teste surtout la **découverte**, la **composition** et la **réfutation**. Elle **ne résout pas encore** le problème général de la recherche dans un espace de programmes arbitraires.
+
 ## Carte des modules
 
 | Module | Responsabilité | Agent |

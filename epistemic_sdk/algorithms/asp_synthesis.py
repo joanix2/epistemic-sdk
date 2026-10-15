@@ -93,22 +93,25 @@ class ASPSynthesisEngine:
         return terms
 
     def _build_program(self) -> str:
+        nullary = [name for name, arity in self.config.grammar.items() if arity == 0]
+        operators = [
+            (name, arity) for name, arity in self.config.grammar.items() if arity > 0
+        ]
         lines: list[str] = []
-        for name, arity in self.config.grammar.items():
-            if arity == 0:
-                lines.append(f'nullary("{name}").')
-            else:
-                lines.append(f'operator("{name}", {arity}).')
+        for name, arity in operators:
+            lines.append(f'operator("{name}", {arity}).')
+        for name in nullary:
+            lines.append(f'nullary("{name}").')
         for variable in self.config.variables:
             lines.append(f'variable("{variable}").')
         lines.append(f"node(1..{self.max_nodes}).")
         lines.append("used(1).")
         lines.append("used(M) :- child(_, _, M).")
-        lines.append(
-            "1 { label_var(N, V) : variable(V); "
-            "label_const(N, C) : nullary(C); "
-            "label_op(N, F) : operator(F, _) } 1 :- used(N)."
-        )
+        label_options = ["label_var(N, V) : variable(V)"]
+        if nullary:
+            label_options.append("label_const(N, C) : nullary(C)")
+        label_options.append("label_op(N, F) : operator(F, _)")
+        lines.append(f"1 {{ {'; '.join(label_options)} }} 1 :- used(N).")
         lines.append(
             "1 { child(N, P, M) : node(M), M > N } 1 "
             ":- label_op(N, F), operator(F, K), P = 1..K."

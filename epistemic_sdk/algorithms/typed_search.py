@@ -1,11 +1,16 @@
 """Bounded, deterministic enumeration respecting an M2 signature.
 
-No observational equivalence is used to delete candidates: agreement on the
-training set is not a proof of equivalence on future experiments. Enumeration
-is lazy at the requested result sort, but subterm tables still grow rapidly.
-Only exact sorts are supported; subsort coercions require an explicit operator.
+By default no observational equivalence is used to delete candidates: agreement
+on the training set is not a proof of equivalence on future experiments. A caller
+may opt in with a ``signature`` of a term on its training inputs. Terms are then
+visited by increasing size and a term with an already seen signature (or no
+signature, i.e. undefined) is dropped. This keeps a smallest training-consistent
+program, because a duplicate can always be replaced by its smaller twin, but it
+hides the other training-consistent programs. Enumeration is lazy at the
+requested result sort, but subterm tables still grow rapidly. Only exact sorts
+are supported; subsort coercions require an explicit operator.
 """
-from collections.abc import Iterator
+from collections.abc import Callable, Hashable, Iterator
 from dataclasses import dataclass
 from itertools import product
 
@@ -47,8 +52,25 @@ def enumerate_typed_terms(
     result_sort: str,
     max_nodes: int,
     budget: EnumerationBudget | None = None,
+    signature: Callable[[Term], Hashable | None] | None = None,
 ) -> Iterator[Term]:
-    """Yield well-sorted terms by node count, then declaration order."""
+    """Yield well-sorted terms by node count, then declaration order.
+
+    With ``signature``, keep only the first term per (sort, signature) and drop
+    terms whose signature is ``None``; the caller must make an undefined
+    subterm yield an undefined term for this pruning to be sound.
+    """
+    seen: set[tuple[str, Hashable]] = set()
+
+    def keep(term: Term, sort: str) -> bool:
+        if signature is None:
+            return True
+        key = signature(term)
+        if key is None or (sort, key) in seen:
+            return False
+        seen.add((sort, key))
+        return True
+
     sorts = {sort.name for sort in language.sorts}
     if result_sort not in sorts or any(v.sort not in sorts for v in variables):
         raise ValueError("undeclared variable or result sort")
@@ -77,6 +99,8 @@ def enumerate_typed_terms(
                     continue
                 if budget is not None:
                     budget.consume()
+                if not keep(variable, variable.sort):
+                    continue
                 table[size, variable.sort].append(variable)
                 if variable.sort == result_sort:
                     yield variable
@@ -92,6 +116,8 @@ def enumerate_typed_terms(
                     if budget is not None:
                         budget.consume()
                     term = Application(operator.name, arguments)
+                    if not keep(term, operator.result):
+                        continue
                     table[size, operator.result].append(term)
                     if operator.result == result_sort:
                         yield term

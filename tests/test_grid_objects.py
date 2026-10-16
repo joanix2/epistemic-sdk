@@ -9,7 +9,6 @@ from epistemic_sdk.algorithms.grid_objects import (
     complete_reflection,
     components,
     crop_bbox,
-    dominant_color,
     extract_object,
     fill_holes,
     object_crop,
@@ -148,14 +147,6 @@ class GridObjectTests(unittest.TestCase):
                          parse("0000 0110 0220"))
         with self.assertRaises(ValueError):
             complete_bbox_reflection(parse("000"), "vertical")
-
-    def test_dominant_color_is_deterministic(self) -> None:
-        source = parse("0112 0133")
-        self.assertEqual(dominant_color(source), 1)
-        self.assertEqual(dominant_color(source, least=True), 2)
-        self.assertEqual(dominant_color(parse("0001"), ignore_background=False), 0)
-        self.assertEqual(dominant_color(parse("12")), 1)
-        self.assertEqual(dominant_color(parse("00")), 0)
 
     def test_separator_cells_and_equal_splits(self) -> None:
         regions = separator_cells(parse("1151 1151 5555 2253 2253"))

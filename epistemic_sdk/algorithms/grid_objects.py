@@ -83,18 +83,6 @@ class GridObject:
         return tuple((row - top, column - left) for row, column, _ in self.cells)
 
 
-def dominant_color(
-    grid: Grid, ignore_background: bool = True, least: bool = False, background: int = 0,
-) -> int:
-    """Most (or least) frequent color; ties take the smallest color, empty gives background."""
-    counts = Counter(value for row in grid.cells for value in row
-                     if not (ignore_background and value == background))
-    if not counts:
-        return background
-    sign = 1 if least else -1
-    return min(counts.items(), key=lambda item: (sign * item[1], item[0]))[0]
-
-
 def _offsets(connectivity: int) -> tuple[tuple[int, int], ...]:
     if connectivity not in (4, 8):
         raise ValueError("Connectivity must be 4 or 8")

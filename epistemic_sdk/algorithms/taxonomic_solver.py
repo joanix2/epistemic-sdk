@@ -2,14 +2,16 @@
 
 The solver has no test-output parameter. A family is a search hypothesis, and
 each attempted task language is an explicit specialization of a shared node.
-Only deterministic definitions are promoted. Evidence of fitting one task does
-not make the corresponding rule true of every task in the family.
+Every solution is a readable composition of primitives found by bounded
+enumeration; the only per-task estimate is a constant color table. Only
+deterministic definitions are promoted. Evidence of fitting one task does not
+make the corresponding rule true of every task in the family.
 """
 from __future__ import annotations
 
 import hashlib
 import json
-from collections.abc import Mapping, Sequence
+from collections.abc import Hashable, Mapping, Sequence
 from dataclasses import dataclass, replace
 from functools import lru_cache, partial
 from typing import Any
@@ -18,8 +20,6 @@ from epistemic_sdk import Application, Constant, Operator, Variable
 from epistemic_sdk.m3.term import Term
 
 from .arc_language import build_arc_taxonomy
-from .fitted_families import FITTED_FAMILIES
-from .fitting import GridFunction, Learner, Training
 from .grid_objects import Grid
 from .grid_transforms import recolor
 from .language_discovery import LanguageDiscovery
@@ -27,6 +27,10 @@ from .language_taxonomy import LanguageRef, LanguageSnapshot, OperatorBinding
 from .rewriting import substitute
 
 UNDEFINED = object()
+
+# Scopes searched in this order; the first four are bounded to shallow programs.
+SHALLOW_SCOPES = ("geometry", "symmetry", "topology", "dynamics")
+COMPOSITION_SCOPES = ("logic", "layout", "object_geometry")
 
 
 class GridEvaluator:
@@ -36,7 +40,7 @@ class GridEvaluator:
         self._semantics = snapshot.semantics
         self._definitions = {item.operator.name: item for item in snapshot.learned}
         self._max_cells = max_cells
-        self._evaluate = lru_cache(maxsize=20_000)(self._uncached)
+        self._evaluate = lru_cache(maxsize=200_000)(self._uncached)
 
     def _uncached(self, term: Term, grid: Grid) -> Any:
         if isinstance(term, Variable):
@@ -89,42 +93,18 @@ def operator_names(term: Term) -> tuple[str, ...]:
     return ()
 
 
-def _mapping(training: Sequence[tuple[Grid, Grid]]) -> dict[int, int] | None:
-    mapping: dict[int, int] = {}
-    for source, target in training:
-        if (source.height, source.width) != (target.height, target.width):
+def _color_table(pairs: Sequence[tuple[Any, Grid]]) -> dict[int, int] | None:
+    """Constant color table sending each candidate output to its target, if one exists."""
+    table: dict[int, int] = {}
+    for value, target in pairs:
+        if not (isinstance(value, Grid) and value.height == target.height
+                and value.width == target.width):
             return None
-        for source_row, target_row in zip(source.cells, target.cells, strict=True):
-            for before, after in zip(source_row, target_row, strict=True):
-                if before in mapping and mapping[before] != after:
+        for value_row, target_row in zip(value.cells, target.cells, strict=True):
+            for before, after in zip(value_row, target_row, strict=True):
+                if table.setdefault(before, after) != after:
                     return None
-                mapping[before] = after
-    return mapping
-
-
-def _fit_learners(learners: Mapping[str, Learner], training: Training) -> dict[str, GridFunction]:
-    fitted = {}
-    for name, learner in learners.items():
-        function = learner(training)
-        if function is not None:
-            fitted[name] = function
-    return fitted
-
-
-def _task_bindings(training: Training, include_fitted: bool) -> tuple[OperatorBinding, ...]:
-    """Operators estimated from this task's training pairs only."""
-    bindings: list[OperatorBinding] = []
-    mapping = _mapping(training)
-    if mapping is not None:
-        bindings.append(OperatorBinding(
-            Operator("task_recolor", ("Grid",), "Grid"), partial(recolor, mapping=mapping),
-        ))
-    if include_fitted:
-        for learners in FITTED_FAMILIES.values():
-            bindings.extend(
-                OperatorBinding(Operator(name, ("Grid",), "Grid"), function)
-                for name, function in _fit_learners(learners, training).items())
-    return tuple(bindings)
+    return table
 
 
 class TaxonomicSolver:
@@ -136,20 +116,16 @@ class TaxonomicSolver:
     """
 
     def __init__(self, *, max_candidates: int = 5000, max_nodes: int = 5,
-                 flat: bool = False) -> None:
+                 flat: bool = False, max_generated: int = 50_000) -> None:
         self.taxonomy, self.scopes = build_arc_taxonomy()
         self.max_candidates = max_candidates
         self.max_nodes = max_nodes
+        self.max_generated = max_generated
         self.flat = flat
         self.promotions: list[dict[str, Any]] = []
 
     def solve(self, task_id: str, training: Sequence[tuple[Grid, Grid]]) -> TaskProgram:
-        """Search enumerated families, then verify task-fitted families directly.
-
-        Enumeration is charged to ``max_candidates``. Task-fitted learners are not:
-        each is a bounded, deterministic fit whose output is checked on every
-        training pair but never enumerated.
-        """
+        """Search the enumerated families in order; ``max_candidates`` bounds the total."""
         if not training:
             return TaskProgram(None, None, None, 0, (), ())
         cases = [({"g": source}, target) for source, target in training]
@@ -160,18 +136,10 @@ class TaxonomicSolver:
                 continue
             attempted.append(name)
             program, snapshot, evaluated = self._search_scope(
-                task_id, name, parent, training, cases, self.max_candidates - total)
+                task_id, name, parent, cases, self.max_candidates - total)
             total += evaluated
             if program is not None and snapshot is not None:
                 return self._program(program, snapshot, parent, total, attempted)
-        if self.flat:
-            return TaskProgram(None, None, None, total, tuple(attempted), ())
-        for family in FITTED_FAMILIES:
-            attempted.append(family)
-            found = self._verify_fitted(task_id, family, training, cases)
-            if found is not None:
-                program, snapshot = found
-                return self._program(program, snapshot, self.scopes[family], total, attempted)
         return TaskProgram(None, None, None, total, tuple(attempted), ())
 
     def _enumerated_scopes(self, training: Sequence[tuple[Grid, Grid]],
@@ -180,7 +148,7 @@ class TaxonomicSolver:
         order = ["geometry"]
         order.extend(["symmetry", "topology", "dynamics", "object_selection"]
                      if same_shape else ["object_selection", "symmetry", "topology", "dynamics"])
-        order.append("object_geometry")
+        order.extend(COMPOSITION_SCOPES)
         if self.flat:
             parent = self.taxonomy.define_node(
                 "flat", parents=tuple(self.scopes[name] for name in order),
@@ -198,44 +166,48 @@ class TaxonomicSolver:
 
     def _search_scope(
         self, task_id: str, name: str, parent: LanguageRef,
-        training: Sequence[tuple[Grid, Grid]], cases: Sequence[tuple[dict[str, Grid], Grid]],
-        budget: int,
-    ) -> tuple[Term | None, LanguageSnapshot, int]:
-        bindings = _task_bindings(training, include_fitted=name == "flat")
-        snapshot = self._specialize(task_id, name, parent, bindings)
+        cases: Sequence[tuple[dict[str, Grid], Grid]], budget: int,
+    ) -> tuple[Term | None, LanguageSnapshot | None, int]:
+        family = self.taxonomy.resolve(parent)
         # Learned abstractions are retrieval priors; all are still checked
         # against every training case before application to a new task.
-        learned_names = {item.operator.name for item in snapshot.learned}
-        language = replace(snapshot.language, operators=tuple(sorted(
-            snapshot.language.operators,
-            key=lambda op: (op.name not in learned_names, op.name == "task_recolor"),
-        )))
-        shallow = ("geometry", "symmetry", "topology", "dynamics")
-        discovery = LanguageDiscovery(
-            language, ("g",), GridEvaluator(snapshot), (),
-            max_nodes=min(self.max_nodes, 3) if name in shallow else self.max_nodes,
-            variable_sorts={"g": "Grid"}, result_sort="Grid",
-        )
-        result = discovery.fit(cases, max_candidates=budget)
-        return result.program, snapshot, result.evaluated
+        learned_names = {item.operator.name for item in family.learned}
+        language = replace(family.language, operators=tuple(sorted(
+            family.language.operators, key=lambda op: op.name not in learned_names)))
+        evaluator = GridEvaluator(family)
+        table: dict[int, int] = {}
 
-    def _verify_fitted(
-        self, task_id: str, family: str, training: Sequence[tuple[Grid, Grid]],
-        cases: Sequence[tuple[dict[str, Grid], Grid]],
-    ) -> tuple[Term, LanguageSnapshot] | None:
-        fitted = _fit_learners(FITTED_FAMILIES[family], training)
-        if not fitted:
-            return None
-        snapshot = self._specialize(task_id, family, self.scopes[family], tuple(
-            OperatorBinding(Operator(name, ("Grid",), "Grid"), function)
-            for name, function in fitted.items()
-        ))
-        evaluator = GridEvaluator(snapshot)
-        for name in fitted:
-            program = Application(name, (Variable("g", "Grid"),))
-            if all(evaluator(program, inputs) == target for inputs, target in cases):
-                return program, snapshot
-        return None
+        def signature(term: Term) -> Hashable | None:
+            # Hash digest keeps memory flat; None marks an undefined term.
+            values = tuple(evaluator(term, inputs) for inputs, _ in cases)
+            return None if any(value is UNDEFINED for value in values) else hash(values)
+
+        def complete(term: Term) -> Term | None:
+            """Exact match, or match after one constant color table estimated on training."""
+            values = [evaluator(term, inputs) for inputs, _ in cases]
+            if all(value == target for value, (_, target) in zip(values, cases, strict=True)):
+                return term
+            estimate = _color_table([(value, target) for value, (_, target)
+                                     in zip(values, cases, strict=True)])
+            if estimate is None:
+                return None
+            table.clear()
+            table.update(estimate)
+            return Application("task_recolor", (term,))
+
+        discovery = LanguageDiscovery(
+            language, ("g",), evaluator, (),
+            max_nodes=min(self.max_nodes, 3) if name in SHALLOW_SCOPES else self.max_nodes,
+            variable_sorts={"g": "Grid"}, result_sort="Grid", signature=signature,
+            complete=complete,
+        )
+        result = discovery.fit(cases, max_candidates=budget, max_generated=self.max_generated)
+        if result.program is None:
+            return None, None, result.evaluated
+        bindings = (OperatorBinding(
+            Operator("task_recolor", ("Grid",), "Grid"), partial(recolor, mapping=dict(table)),
+        ),) if "task_recolor" in operator_names(result.program) else ()
+        return result.program, self._specialize(task_id, name, parent, bindings), result.evaluated
 
     def _program(self, program: Term, snapshot: LanguageSnapshot, scope: LanguageRef,
                  evaluated: int, attempted: Sequence[str]) -> TaskProgram:
@@ -277,7 +249,7 @@ class TaxonomicSolver:
         return result
 
     def export_memory(self) -> str:
-        """Persist reusable families only, excluding task-local fitted callbacks."""
+        """Persist reusable families only, excluding task-local specializations."""
         records = json.loads(self.taxonomy.export_records())
         records["nodes"] = [record for record in records["nodes"]
                             if not record["ref"][0].startswith("task:")

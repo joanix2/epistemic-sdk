@@ -7,7 +7,7 @@ corroborated program is not already a primitive — lift it into a new operator
 experiments: it works for any function over a finite domain, not a hardcoded
 target.
 """
-from collections.abc import Callable, Mapping, Sequence
+from collections.abc import Callable, Hashable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Any
 
@@ -56,6 +56,8 @@ class LanguageDiscovery:
         max_nodes: int = 9,
         variable_sorts: Mapping[str, str] | None = None,
         result_sort: str | None = None,
+        signature: Callable[[Term], Hashable | None] | None = None,
+        complete: Callable[[Term], Term | None] | None = None,
     ) -> None:
         self._base_language = base_language
         self._variables = variables
@@ -64,6 +66,8 @@ class LanguageDiscovery:
         self._max_nodes = max_nodes
         self._variable_sorts = variable_sorts
         self._result_sort = result_sort
+        self._signature = signature
+        self._complete = complete
 
     def fit(
         self,
@@ -76,7 +80,12 @@ class LanguageDiscovery:
         """Select programs without receiving any validation outputs.
 
         Retain distinct training-consistent programs when ``max_results > 1``.
-        Domain probes are not needed here: no observational quotient is used.
+        A ``signature`` enables observational deduplication, which hides those
+        duplicates; use it only to find a smallest consistent program.
+        A ``complete`` hook replaces the exact-match test: it returns the program
+        to retain (a candidate possibly completed with constants estimated from
+        the training pairs) or ``None``.
+        Domain probes are not needed here: the optional quotient uses training inputs only.
         Evaluators must represent inapplicable programs by a non-output value;
         unexpected exceptions are intentionally not swallowed.
         """
@@ -100,11 +109,15 @@ class LanguageDiscovery:
         budget = EnumerationBudget(max_generated)
         try:
             for term in enumerate_typed_terms(
-                self._base_language, variables, result_sort, self._max_nodes, budget
+                self._base_language, variables, result_sort, self._max_nodes, budget,
+                self._signature,
             ):
                 evaluated += 1
-                if all(self._evaluate(term, inputs) == output for inputs, output in training):
-                    candidates.append(term)
+                found = self._complete(term) if self._complete else (
+                    term if all(self._evaluate(term, inputs) == output
+                                for inputs, output in training) else None)
+                if found is not None:
+                    candidates.append(found)
                     if len(candidates) == max_results:
                         return FitResult(candidates[0], tuple(candidates), evaluated, False,
                                          budget.generated)

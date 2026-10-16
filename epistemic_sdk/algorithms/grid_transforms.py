@@ -3,11 +3,11 @@
 ARC tasks are input-grid -> output-grid transformations. This module provides
 the elementary transformations used as the primitive operators of the grid
 language: recoloring, reflections and rotations, diagonal symmetries, cropping,
-integer upscaling, padding, halves, gravity and shifts, plus the block helpers
-used to build tiled outputs. Each function is pure and returns a new ``Grid``;
-partial ones document ``ValueError`` for inapplicable inputs.
+integer upscaling, padding, halves, gravity and shifts, concatenation, boolean
+logic on masks and dilation/erosion. Each function is pure and returns
+a new ``Grid``; partial ones document ``ValueError`` for inapplicable inputs.
 """
-from collections.abc import Collection, Mapping, Sequence
+from collections.abc import Callable, Mapping
 
 from .grid_objects import Grid
 
@@ -161,34 +161,71 @@ def dedupe(grid: Grid, axis: str) -> Grid:
     return Grid(tuple(rows))
 
 
-def blank(height: int, width: int) -> Grid:
-    return Grid(tuple((0,) * width for _ in range(height)))
+def hconcat(left: Grid, right: Grid) -> Grid:
+    """Place ``right`` next to ``left``; heights must match."""
+    if left.height != right.height:
+        raise ValueError("heights differ")
+    return Grid(tuple(a + b for a, b in zip(left.cells, right.cells, strict=True)))
 
 
-def block(grid: Grid, row: int, column: int, height: int, width: int) -> Grid:
-    """Sub-grid at block index (row, column) for blocks of the given size."""
+def vconcat(top: Grid, bottom: Grid) -> Grid:
+    """Stack ``bottom`` under ``top``; widths must match."""
+    if top.width != bottom.width:
+        raise ValueError("widths differ")
+    return Grid(top.cells + bottom.cells)
+
+
+def _combine(first: Grid, second: Grid, rule: Callable[[int, int], int]) -> Grid:
+    if (first.height, first.width) != (second.height, second.width):
+        raise ValueError("shapes differ")
     return Grid(tuple(
-        grid.cells[r][column * width:(column + 1) * width]
-        for r in range(row * height, (row + 1) * height)
+        tuple(rule(a, b) for a, b in zip(row_a, row_b, strict=True))
+        for row_a, row_b in zip(first.cells, second.cells, strict=True)
     ))
 
 
-def assemble(blocks: Sequence[Sequence[Grid]]) -> Grid:
-    """Concatenate a rectangular array of equally sized blocks."""
+def logical_and(first: Grid, second: Grid) -> Grid:
+    """Keep ``first`` where both grids are non-zero."""
+    return _combine(first, second, lambda a, b: a if a and b else 0)
+
+
+def logical_or(first: Grid, second: Grid) -> Grid:
+    """Keep ``first`` where non-zero, else ``second``."""
+    return _combine(first, second, lambda a, b: a or b)
+
+
+def logical_xor(first: Grid, second: Grid) -> Grid:
+    """Keep the non-zero cell of whichever grid is non-zero alone."""
+    return _combine(first, second, lambda a, b: a or b if not (a and b) else 0)
+
+
+def logical_not(grid: Grid) -> Grid:
+    """Mask inversion: background becomes 1, foreground becomes 0."""
+    return Grid(tuple(tuple(0 if cell else 1 for cell in row) for row in grid.cells))
+
+
+_NEIGHBORS = {4: ((-1, 0), (1, 0), (0, -1), (0, 1)),
+              8: tuple((r, c) for r in (-1, 0, 1) for c in (-1, 0, 1) if (r, c) != (0, 0))}
+
+
+def dilate(grid: Grid, connectivity: int) -> Grid:
+    """Background cells touching foreground take its smallest neighboring color."""
+    def neighbors(r: int, c: int) -> list[int]:
+        return [grid.cells[r + dr][c + dc] for dr, dc in _NEIGHBORS[connectivity]
+                if 0 <= r + dr < grid.height and 0 <= c + dc < grid.width
+                and grid.cells[r + dr][c + dc]]
     return Grid(tuple(
-        tuple(value for item in line for value in item.cells[r])
-        for line in blocks for r in range(line[0].height)
+        tuple(value or min(neighbors(r, c), default=0) for c, value in enumerate(row))
+        for r, row in enumerate(grid.cells)
     ))
 
 
-def crop_to_colors(grid: Grid, colors: Collection[int], inset: int = 0) -> Grid:
-    """Bounding box of the given colors, shrunk by ``inset`` cells on every side."""
-    found = [(r, c) for r, row in enumerate(grid.cells) for c, value in enumerate(row)
-             if value in colors]
-    if not found:
-        raise ValueError("no cell of the requested colors")
-    top, bottom = min(r for r, _ in found) + inset, max(r for r, _ in found) + 1 - inset
-    left, right = min(c for _, c in found) + inset, max(c for _, c in found) + 1 - inset
-    if top >= bottom or left >= right:
-        raise ValueError("inset leaves an empty grid")
-    return Grid(tuple(row[left:right] for row in grid.cells[top:bottom]))
+def erode(grid: Grid, connectivity: int) -> Grid:
+    """Remove foreground cells touching background or the border."""
+    def inside(r: int, c: int) -> bool:
+        return all(0 <= r + dr < grid.height and 0 <= c + dc < grid.width
+                   and grid.cells[r + dr][c + dc] for dr, dc in _NEIGHBORS[connectivity])
+    return Grid(tuple(
+        tuple(value if value and inside(r, c) else 0 for c, value in enumerate(row))
+        for r, row in enumerate(grid.cells)
+    ))

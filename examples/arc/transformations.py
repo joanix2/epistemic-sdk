@@ -1,4 +1,4 @@
-"""ARC adapter: shared grid primitives and training-only parameter fitting."""
+"""ARC adapter: shared grid primitives."""
 from epistemic_sdk.algorithms.grid_transforms import (
     anti_transpose as anti_transpose,
 )

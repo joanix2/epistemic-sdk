@@ -45,6 +45,26 @@ class TypedSearchTests(unittest.TestCase):
         self.assertFalse(result.exhausted)
         self.assertEqual(result.evaluated, 1)
 
+    def test_signature_keeps_a_smallest_program_and_prunes_undefined_terms(self):
+        language = LanguageM2("numbers", "1", (Sort("N"),), (
+            Operator("negate", ("N",), "N"),
+            Operator("boom", ("N",), "N"),
+        ))
+        x = Variable("x", "N")
+
+        def signature(term):
+            if isinstance(term, Variable):
+                return 3
+            value = signature(term.arguments[0])
+            if value is None or term.operator == "boom":
+                return None
+            return -value
+
+        self.assertEqual(list(enumerate_typed_terms(language, (x,), "N", 4, None, signature)), [
+            x, Application("negate", (x,)),
+        ])
+        self.assertEqual(len(list(enumerate_typed_terms(language, (x,), "N", 3))), 7)
+
     def test_arc_program_is_independent_of_test_output(self):
         from examples.arc.discovery import discover_task
         from examples.arc.loader import Example, Grid, Task

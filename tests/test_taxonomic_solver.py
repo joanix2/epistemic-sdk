@@ -2,7 +2,12 @@
 import unittest
 
 from epistemic_sdk.algorithms.grid_objects import Grid
-from epistemic_sdk.algorithms.taxonomic_solver import UNDEFINED, GridEvaluator, TaxonomicSolver
+from epistemic_sdk.algorithms.taxonomic_solver import (
+    UNDEFINED,
+    GridEvaluator,
+    TaxonomicSolver,
+    operator_names,
+)
 from epistemic_sdk.m3.application import Application
 from epistemic_sdk.m3.variable import Variable
 from tests.grid_helpers import grid
@@ -89,14 +94,19 @@ class TaxonomicSolverTests(unittest.TestCase):
         self.assertIsNone(result.program)
         self.assertEqual(solver.solve("empty", []).evaluated, 0)
 
-    def test_fitted_learners_are_not_charged_to_the_candidate_budget(self):
-        training = [(grid("0000 0520 0520 0000"), grid("52 52")),
-                    (grid("0000 0000 0053 0000"), grid("53"))]
-        result = TaxonomicSolver(max_candidates=1).solve("fitted", training)
-        self.assertIsInstance(result.program, Application)
-        assert isinstance(result.program, Application)
-        self.assertTrue(result.program.operator.startswith("task_"))
-        self.assertLessEqual(result.evaluated, 1)
+    def test_separation_intersection_and_recoloring_are_readable_steps(self):
+        training = [
+            (grid("1105011 0115100 1015101"), grid("020 000 202")),
+            (grid("1115110 0005001 1005111"), grid("220 000 200")),
+        ]
+        result = TaxonomicSolver(max_nodes=6).solve("intersect", training)
+        assert result.program is not None
+        names = operator_names(result.program)
+        self.assertIn("and", names)
+        self.assertTrue({"keep_left", "keep_right"} <= set(names))
+        self.assertEqual(result.scope.node_id if result.scope else None, "logic")
+        self.assertEqual(result.predict(grid("1015111")), grid("202"))
+        self.assertLessEqual({n for n in names if n.startswith("task_")}, {"task_recolor"})
 
     def test_macros_preserve_intermediate_execution_bounds(self):
         solver = TaxonomicSolver()

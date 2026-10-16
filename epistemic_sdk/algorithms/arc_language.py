@@ -13,7 +13,6 @@ from typing import Any
 from epistemic_sdk import Operator, Sort
 
 from . import grid_transforms as transforms
-from .fitted_families import FITTED_FAMILIES
 from .grid_objects import (
     Grid,
     complete_bbox_reflection,
@@ -40,7 +39,7 @@ def build_arc_taxonomy() -> tuple[LanguageTaxonomy, dict[str, LanguageRef]]:
     """Create a reproducible seed; registration order is also a search prior."""
     taxonomy = LanguageTaxonomy()
     root = taxonomy.define_node("grid", sorts=(Sort("Grid"),))
-    geometry: dict[str, Callable[..., Any]] = {
+    orientation: dict[str, Callable[..., Any]] = {
         "flip_horizontal": transforms.flip_horizontal,
         "flip_vertical": transforms.flip_vertical,
         "rotate_90": transforms.rotate_90,
@@ -48,20 +47,30 @@ def build_arc_taxonomy() -> tuple[LanguageTaxonomy, dict[str, LanguageRef]]:
         "rotate_270": transforms.rotate_270,
         "transpose": transforms.transpose,
         "anti_transpose": transforms.anti_transpose,
+    }
+    parts: dict[str, Callable[..., Any]] = {
+        f"keep_{part}": partial(transforms.half, part=part) for part in (
+            "top", "bottom", "left", "right",
+            "top_left", "top_right", "bottom_left", "bottom_right")
+    }
+    resizing: dict[str, Callable[..., Any]] = {
         "crop": transforms.crop,
         "upscale_2": partial(transforms.upscale, factor=2),
         "upscale_3": partial(transforms.upscale, factor=3),
         "pad_square": transforms.pad_square,
         **{f"dedupe_{axis}": partial(transforms.dedupe, axis=axis)
            for axis in ("rows", "columns", "both")},
-        **{f"keep_{part}": partial(transforms.half, part=part) for part in (
-            "top", "bottom", "left", "right",
-            "top_left", "top_right", "bottom_left", "bottom_right")},
     }
-    global_ref = taxonomy.define_node("geometry", parents=(root,), operators=tuple(
-        OperatorBinding(Operator(name, ("Grid",), "Grid"), function)
-        for name, function in geometry.items()
-    ))
+
+    def bind(functions: dict[str, Callable[..., Any]]) -> tuple[OperatorBinding, ...]:
+        return tuple(OperatorBinding(Operator(name, ("Grid",), "Grid"), function)
+                     for name, function in functions.items())
+
+    orientation_ref = taxonomy.define_node("orientation", parents=(root,),
+                                           operators=bind(orientation))
+    parts_ref = taxonomy.define_node("parts", parents=(root,), operators=bind(parts))
+    global_ref = taxonomy.define_node("geometry", parents=(orientation_ref, parts_ref),
+                                      operators=bind(resizing))
     object_bindings = []
     for connectivity in (4, 8):
         for monochrome in (False, True):
@@ -112,6 +121,10 @@ def build_arc_taxonomy() -> tuple[LanguageTaxonomy, dict[str, LanguageRef]]:
                           partial(fill_holes, color=color)) for color in range(1, 10)),
         *(OperatorBinding(Operator(f"remove_noise_{size}", ("Grid",), "Grid"),
                           partial(remove_small_objects, max_size=size)) for size in (1, 2, 3)),
+        *(OperatorBinding(Operator(f"{name}_{connectivity}", ("Grid",), "Grid"),
+                          partial(function, connectivity=connectivity))
+          for name, function in (("dilate", transforms.dilate), ("erode", transforms.erode))
+          for connectivity in (4, 8)),
     ))
     dynamics_ref = taxonomy.define_node("dynamics", parents=(root,), operators=tuple(
         OperatorBinding(Operator(f"{name}_{side}", ("Grid",), "Grid"),
@@ -122,9 +135,16 @@ def build_arc_taxonomy() -> tuple[LanguageTaxonomy, dict[str, LanguageRef]]:
     composed_ref = taxonomy.define_node(
         "object_geometry", parents=(global_ref, selection_ref),
     )
-    fitted_refs = {
-        name: taxonomy.define_node(name, parents=(root,)) for name in FITTED_FAMILIES
-    }
+    logic_ref = taxonomy.define_node("logic", parents=(orientation_ref, parts_ref), operators=(
+        *(OperatorBinding(Operator(name, ("Grid", "Grid"), "Grid"), function)
+          for name, function in (("and", transforms.logical_and), ("or", transforms.logical_or),
+                                 ("xor", transforms.logical_xor))),
+        OperatorBinding(Operator("not", ("Grid",), "Grid"), transforms.logical_not),
+    ))
+    layout_ref = taxonomy.define_node("layout", parents=(orientation_ref, parts_ref), operators=(
+        OperatorBinding(Operator("hconcat", ("Grid", "Grid"), "Grid"), transforms.hconcat),
+        OperatorBinding(Operator("vconcat", ("Grid", "Grid"), "Grid"), transforms.vconcat),
+    ))
     return taxonomy, {
         "geometry": global_ref,
         "object_selection": selection_ref,
@@ -132,5 +152,6 @@ def build_arc_taxonomy() -> tuple[LanguageTaxonomy, dict[str, LanguageRef]]:
         "topology": topology_ref,
         "dynamics": dynamics_ref,
         "object_geometry": composed_ref,
-        **fitted_refs,
+        "logic": logic_ref,
+        "layout": layout_ref,
     }

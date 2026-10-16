@@ -59,5 +59,7 @@ flowchart TD
 
 ## Coordination inter-agents
 
+Depuis ADR-007, `algorithms/arc_language.py` compose `LanguageM2`, la taxonomie et les primitives de grille internes. `algorithms/taxonomic_solver.py` réutilise `LanguageDiscovery.fit` et la recherche typée. Les adaptateurs `examples/arc/` importent ces algorithmes ; aucun algorithme n'importe les exemples. `examples/arc/loader.py` réexporte `Grid`. Le harness d'expérience utilise les contrats d'hypothèse, exécution et validation sans les modifier.
+
 - `execution/` est partagé entre **transformations** (`*_transformation*.py`, `transformation_pipeline.py`) et **execution** (`executor.py`, `program_runner.py`) : toute écriture croisée y est coordonnée par l'architecte.
 - Toute dépendance nouvelle ou supprimée doit être reportée ici et dans `DECISIONS.md`.

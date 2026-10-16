@@ -1,3 +1,38 @@
+# PROGRESS — expérience de transfert ARC (2026-10-16)
+
+## Mise à jour : apprenants ajustés à la tâche (développement uniquement)
+
+- La recherche par taxonomie atteint **100/400** sur `training` (contre 26/400 ci-dessous), mesure locale d'une seule prédiction par entrée, sans score officiel ARC Prize. Détail par famille et limites : `docs/experiments/arc-taxonomy/REPORT.md` (section « Apprenants ajustés à la tâche »).
+- Nouvelles familles `tiling`, `partition`, `extraction`, `local_rule`, chacune avec une variante `*_cropped`. Leurs paramètres sont estimés sur les exemples d'entraînement par des apprenants (`fitting`, `layout_learners`, `extraction_learners`, `local_rule`, descripteurs de cellule dans `grid_features`). Ils sont vérifiés directement et non énumérés ; leur coût n'est pas imputé au budget `max_candidates`.
+- Les anciens chiffres d'évaluation (4/400) et la mémoire archivée `memory.json` correspondent à l'architecture précédente : la mémoire n'est plus importable (familles et primitives modifiées) et l'évaluation n'a pas été relancée avec le nouveau code. Ne pas les comparer au 100/400.
+- 180 tests, Ruff, mypy (143 fichiers) et harness check passent ; 41 exports publics inchangés.
+
+## État précédent (26/400)
+
+- Architecture intégrée : objets typés, taxonomie de familles M2, spécialisations par tâche, mémoire de définitions avec versions et provenance.
+- Sélection des programmes sur les seuls exemples d'entraînement. Les réponses test sont réservées à la validation.
+- Développement ARC-AGI-1 : global **16/400**, bibliothèque plate **20/400**, recherche par taxonomie **26/400**.
+- Évaluation publique séparée : global **1/400**, bibliothèque plate **2/400**, taxonomie **4/400**. Ce ne sont pas des scores privés ARC Prize.
+- Mémoire : **8 définitions** apprises sur les démonstrations source ; figées avant l'évaluation. Avec transfert : **4/400**, une réutilisation réussie, aucun gain ni perte de tâche face à la taxonomie sans mémoire. Sur cette tâche : 207 → 190 candidats, mais 1 980 511 → 1 980 854 candidats au total.
+- Contrôle avec exactement la même mémoire : le langage plat passe de **2/400 à 3/400** ; la tâche supplémentaire passe de l'échec à 5 000 candidats à une solution en neuf candidats. La mémoire permet donc un transfert sous budget, sans améliorer le score de la taxonomie dans cette expérience.
+- **150 tests**, Ruff, mypy (132 fichiers) et harness check passent ; 41 exports publics inchangés. Aucun commit créé. Les fichiers non suivis préexistants ont été conservés.
+- Rapport détaillé et ablations : `docs/experiments/arc-taxonomy/REPORT.md`. Commandes et limites : `TECHNICAL.md`.
+
+## Ce qui est établi et ce qui reste ouvert
+
+Le nouveau langage d'objets et la sélection par familles améliorent la couverture sur les deux ensembles. L'héritage et la réutilisation de définitions sont exécutables et testés. L'effet du transfert sur le score global n'est pas établi ; sa politique actuelle augmente légèrement la recherche totale. Le gain flat/taxonomy inclut la politique de recherche et les compositions autorisées, pas seulement la topologie du graphe.
+
+La taxonomie initiale et la segmentation des objets restent des choix manuels. Ni la découverte autonome d'une taxonomie, ni la généralisation universelle d'un principe, ni la boucle complète de révision des connaissances ne sont démontrées. Ne plus présenter les quatre problèmes scientifiques comme entièrement validés.
+
+## Suites possibles
+
+- Apprendre les priorités de familles et l'admission des abstractions sur des partitions du développement ; mesurer le coût des définitions peu utiles.
+- Concevoir des relations de transfert avec conditions d'applicabilité et traductions entre représentations.
+- Intégrer la réfutation et l'invalidation traçable, puis traiter les défauts historiques relevés par l'audit.
+- Toute nouvelle optimisation fondée sur les résultats `evaluation` rend cet ensemble impropre à une nouvelle revendication de validation indépendante ; utiliser un autre protocole réservé.
+
+## Historique antérieur (conservé, certaines assertions sont dépassées)
+
 # PROGRESS — reprise du travail de nuit
 
 ## État (dernier commit)

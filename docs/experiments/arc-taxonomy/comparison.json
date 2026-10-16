@@ -1,0 +1,106 @@
+{
+  "summaries": {
+    "training-flat": {
+      "solved": 20,
+      "total": 400,
+      "score_percent": 5.0,
+      "candidates": 1890805,
+      "reused_tasks": 0,
+      "reused_solved": 0,
+      "seconds": 38.83004345199879
+    },
+    "training-global": {
+      "solved": 16,
+      "total": 400,
+      "score_percent": 4.0,
+      "candidates": 0,
+      "reused_tasks": 0,
+      "reused_solved": 0,
+      "seconds": 2.3348107490019174
+    },
+    "training-taxonomy": {
+      "solved": 26,
+      "total": 400,
+      "score_percent": 6.5,
+      "candidates": 1857195,
+      "reused_tasks": 0,
+      "reused_solved": 0,
+      "seconds": 38.2560386940022
+    },
+    "evaluation-flat-memory": {
+      "solved": 3,
+      "total": 400,
+      "score_percent": 0.75,
+      "candidates": 1985771,
+      "reused_tasks": 1,
+      "reused_solved": 1,
+      "seconds": 169.03825718699954
+    },
+    "evaluation-flat": {
+      "solved": 2,
+      "total": 400,
+      "score_percent": 0.5,
+      "candidates": 1990362,
+      "reused_tasks": 0,
+      "reused_solved": 0,
+      "seconds": 55.5807367180023
+    },
+    "evaluation-global": {
+      "solved": 1,
+      "total": 400,
+      "score_percent": 0.25,
+      "candidates": 0,
+      "reused_tasks": 0,
+      "reused_solved": 0,
+      "seconds": 3.083677588001592
+    },
+    "evaluation-taxonomy": {
+      "solved": 4,
+      "total": 400,
+      "score_percent": 1.0,
+      "candidates": 1980511,
+      "reused_tasks": 0,
+      "reused_solved": 0,
+      "seconds": 50.56746634200317
+    },
+    "evaluation-transfer": {
+      "solved": 4,
+      "total": 400,
+      "score_percent": 1.0,
+      "candidates": 1980854,
+      "reused_tasks": 1,
+      "reused_solved": 1,
+      "seconds": 166.0986179979991
+    }
+  },
+  "comparisons": {
+    "taxonomy_to_transfer": {
+      "gained": [],
+      "lost": [],
+      "reused": [
+        {
+          "task_id": "cd3c21df",
+          "solved": true,
+          "cold_candidates": 207,
+          "warm_candidates": 190
+        }
+      ]
+    },
+    "flat_to_flat-memory": {
+      "gained": [
+        "cd3c21df"
+      ],
+      "lost": [],
+      "reused": [
+        {
+          "task_id": "cd3c21df",
+          "solved": true,
+          "cold_candidates": 5000,
+          "warm_candidates": 9
+        }
+      ]
+    }
+  },
+  "memory_sha256": "c2560fd687372661011fdadd18de82f95954ffc4517aa58e078f11c76810c274",
+  "prediction_audit": "passed"
+}

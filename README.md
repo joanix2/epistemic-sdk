@@ -4,7 +4,9 @@ SDK épistémique exécutable, inspiré de Maude, en Python 3.10+. Il fournit le
 
 ## Statut
 
-Le dépôt livre **les interfaces uniquement** : des `typing.Protocol` pour les ports remplaçables et des `dataclass(frozen=True)` pour les objets de valeur. **Aucun moteur n'est encore implémenté** — pas d'interpréteur Maude, de synthèse, d'exécuteur ni de solveur. Bibliothèque standard uniquement, aucune dépendance tierce.
+Le dépôt contient les contrats (`Protocol`, objets de valeur gelés) et des implémentations expérimentales : interprétation finie, réécriture bornée, synthèse, sélection d'expériences et découverte de langages. `epistemic_sdk/algorithms/` héberge aussi une taxonomie versionnée et des opérations sur les objets des grilles ARC. Il n'implémente pas un moteur réflexif Maude. Les interfaces et le moteur ARC utilisent la bibliothèque standard ; certains adaptateurs ont des dépendances optionnelles.
+
+L'expérience de transfert ARC utilise un M2 par tâche, spécialisé depuis des familles partagées. Les programmes sont sélectionnés sur l'entraînement, puis confrontés aux réponses réservées. Voir [TECHNICAL.md](TECHNICAL.md) pour les commandes et [le rapport ARC](docs/experiments/arc-taxonomy/REPORT.md) pour les mesures et leurs limites.
 
 ## Niveaux M3 → M0
 
@@ -63,7 +65,7 @@ uv run graphify extract . --code-only              # graphe de code (optionnel)
 
 ## API publique
 
-`epistemic_sdk` expose **40 symboles** (contrat public, documenté par `__all__`) : sortes, opérateurs, termes et lois M3 ; `LanguageM2` ; `ProgramM1`, `Hypothesis`, `InferenceMode` ; `Observation`, `Sensor` ; croyances ; inférence ; exécution ; validation ; connaissance ; `EpistemicEngine`. Toute modification de signature est une **décision architecturale** — voir [`docs/architecture/DECISIONS.md`](docs/architecture/DECISIONS.md).
+`epistemic_sdk` expose **41 symboles** (contrat public, documenté par `__all__`) : sortes, opérateurs, termes et lois M3 ; `LanguageM2` ; `ProgramM1`, `Hypothesis`, `InferenceMode` ; `Observation`, `Sensor` ; croyances ; inférence ; exécution ; validation ; connaissance ; `EpistemicEngine`. Toute modification de signature est une **décision architecturale** — voir [`docs/architecture/DECISIONS.md`](docs/architecture/DECISIONS.md).
 
 ## Exemple
 

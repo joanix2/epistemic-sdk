@@ -9,7 +9,7 @@ If a task file (`.agentkanban/tasks/**/*.md`) was referenced earlier in this con
 
 # Epistemic SDK — Contexte partagé des agents
 
-Projet : SDK épistémique exécutable, inspiré de Maude, en Python 3.10+. Le dépôt contient actuellement **les interfaces** (`epistemic_sdk/`), un exemple M2 (`examples/nat_language.py`) et des tests de contrats (`tests/test_contracts.py`). **Aucun moteur n'est encore implémenté** (pas d'interpréteur Maude, de synthèse ni de solveurs).
+Projet : SDK épistémique exécutable, inspiré de Maude, en Python 3.10+. Le dépôt contient les interfaces publiques, des algorithmes concrets dans `epistemic_sdk/algorithms/`, les expériences booléennes et ARC, et leurs tests. Un interpréteur fini et de la synthèse bornée existent ; aucun moteur réflexif Maude n'est implémenté. État mesuré : `PROGRESS.md` et `docs/experiments/arc-taxonomy/REPORT.md`.
 
 ## Objectif scientifique
 
@@ -106,7 +106,7 @@ python scripts/harness.py run                 # exécution du harness (tests)
 python scripts/harness.py run --no-cache      # force l'exécution sans cache
 ```
 
-Aucun linter/typechecker n'est encore configuré ; ajouter `ruff`/`mypy`/`pytest` uniquement si demandé.
+`ruff` et `mypy` sont configurés dans `pyproject.toml`. Vérifications : `.venv/bin/ruff check .` et `.venv/bin/mypy epistemic_sdk examples tests`. Ne pas ajouter d'autre outil sans nécessité explicite.
 
 ## Protocole de délégation
 

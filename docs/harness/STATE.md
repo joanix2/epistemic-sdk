@@ -1,26 +1,18 @@
-# État de reprise (STATE)
+# État de reprise
 
-Mémoire de reprise, pas un second historique Git. N'y consigner que les faits utiles pour reprendre le travail.
+## Travail intégré
 
-## Travaux en cours
+Expérience ARC de taxonomie et transfert (ADR-007), réalisée le 2026-10-16. Modules internes de grilles/objets, recherche typée, taxonomie versionnée et définitions persistantes. `LanguageDiscovery.fit` sépare sélection et test. Aucun export public modifié, aucune dépendance ajoutée, aucun commit.
 
-- Mise en place de l'infrastructure multi-agents (AGENTS.md, opencode.json, agents, docs, harness) — en cours, non validée par l'architecte.
+## Résultats confirmés
 
-## Derniers résultats confirmés
+- 180 tests réussis ; Ruff et mypy sur SDK/exemples/tests passent ; harness check vérifie les 41 exports.
+- ARC-AGI-1 training : 16/400 global, 20/400 plat, 26/400 taxonomie, puis **100/400** taxonomie avec apprenants ajustés à la tâche (développement ; evaluation non relancée avec ce code).
+- ARC-AGI-1 evaluation : 1/400 global, 2/400 plat, 4/400 taxonomie, 4/400 avec mémoire source figée.
+- Huit définitions source ; une réutilisation cible réussie, sans gain de couverture. Le coût total en candidats augmente légèrement. Pas de score officiel privé ARC Prize.
 
-- `python -m unittest discover -s tests -v` : 3 tests de contrats passent.
-- Le dépôt ne contient que les interfaces ; aucun moteur (Maude, synthèse, solveurs) n'est implémenté.
-- Exemple M2/M1 : `examples/nat_language.py` (langage `nat` v1.0.0) charge et s'affiche.
+## Limites / reprise
 
-## Prochains objectifs
+`TECHNICAL.md` décrit les APIs internes et les commandes. `docs/experiments/arc-taxonomy/REPORT.md` et les JSON sont la source des mesures, des empreintes et des limites d'interprétation. Le graphe et la politique initiaux sont manuels. L'ancien `discover` utilise son observation étiquetée pour la sélection ; employer `fit` pour une mesure indépendante.
 
-1. Valider l'infrastructure multi-agents (restart OpenCode, charger `@architect`).
-2. Cas d'étude fondateur : algèbre booléenne M2 (constantes, NOT, AND, OR, lois) + découverte de programmes M1.
-3. Implémenter les instances d'algorithmes (génétique, EBM, ILP, MLP, Z3) derrière `InferenceEngine`/`Executor`.
-4. Monter les niveaux de validation 3→7 (M3, M2, M1, validation, boucle de bout en bout).
-5. Concevoir le cache sémantique (couche C).
-
-## Blocages identifiés
-
-- Aucun blocage technique. La conception du cache sémantique (couche C) reste ouverte.
-- `pyproject.toml` référence encore `epistemic.__main__` alors que le paquet s'appelle `epistemic_sdk` (incohérence à traiter lors du premier travail d'intégration).
+Les défauts e-graph, ILP/ASP et révision booléenne de l'audit restent hors périmètre et hors du nouveau chemin ARC. Aucun moteur réflexif Maude ni cache épistémique général n'est implémenté. La boucle complète de révision reste à intégrer.

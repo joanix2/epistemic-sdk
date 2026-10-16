@@ -38,3 +38,21 @@ Journal des décisions structurantes. Format : numéro, date, statut, contexte, 
 - **Date** : 2026-10-15 — **Statut** : accepté.
 - **Décision** : couche A (contexte LLM, compaction native), couche B (cache de développement, `scripts/harness.py`), couche C (cache sémantique épistémologique, à concevoir). Voir `docs/harness/CACHE.md`.
 - **Conséquences** : ne pas construire de framework de cache prématuré ; invalider dès qu'une dépendance est incertaine.
+
+## ADR-007 — Taxonomie M2 partagée et expérience de transfert ARC
+
+- **Date** : 2026-10-16 — **Statut** : implémenté expérimentalement et intégré par l'architecte.
+- **Contexte** : les transformations globales atteignent 16/400 tâches de développement ARC. L'utilisateur demande un langage par tâche issu d'une taxonomie commune, et le transfert des découvertes entre langages.
+- **Décision** : ajouter des composants internes dans `algorithms/`. Chaque M2 de tâche référence des versions immuables de familles partagées. Le DAG autorise l'héritage multiple ; les collisions de signatures/définitions sont rejetées. Les promotions produisent des définitions typées, une nouvelle version et une provenance source. Aucun export ni signature du contrat public ne change.
+- **Sélection** : une méthode `LanguageDiscovery.fit` sépare la sélection sur train de la validation indépendante. L'ancien `discover` garde son sens exploratoire, explicitement documenté. ARC choisit un programme avant accès aux réponses test.
+- **Transfert** : une composition cohérente sur au moins deux exemples peut devenir un opérateur réutilisable de sa famille. Son statut empirique reste candidat. Les descendants doivent choisir explicitement la nouvelle version. La définition n'est pas une généralisation empirique automatique.
+- **Mesure** : comparer primitives globales, bibliothèque plate et recherche guidée par familles ; entraîner la mémoire sur `training`, la figer, puis mesurer sur `evaluation` sans adaptation à ses labels. Rapports par tâche, empreintes des données/code/mémoire, prédictions et liens aux validations conservés.
+- **Conséquences et limites** : la taxonomie et la politique initiales sont manuelles. L'ablation teste un système de recherche, pas la seule topologie. Aucune preuve de généralité, ni boucle complète de révision des connaissances. `Grid` passe des exemples à `algorithms/grid_objects.py` avec réexport compatible ; les anciennes transformations deviennent des réexports de primitives partagées. Voir `TECHNICAL.md` et le rapport de mesure.
+
+## ADR-008 — Apprenants ajustés à la tâche, séparés par rôle
+
+- **Date** : 2026-10-16 — **Statut** : implémenté ; mesure de développement seulement.
+- **Contexte** : les familles énumérées (ADR-007) ne couvrent pas les règles dont les paramètres dépendent de la tâche (assemblage de blocs, règle locale, recadrage).
+- **Décision** : des apprenants purs `training -> (Grid -> Grid) | None` vivent dans `algorithms/`, par rôle et du plus bas au plus haut niveau : `grid_transforms`/`grid_objects` (primitives), `grid_features` (descripteurs de cellule sans tâche), `fitting` (types, `after`), `local_rule`, `layout_learners`, `extraction_learners`, `fitted_families` (registre famille → apprenants). `arc_language` ne déclare que les noms de familles ; le solveur n'importe que le registre. Aucun export ni signature publique ne change.
+- **Sélection** : une fonction ajustée est vérifiée directement sur les paires d'entraînement sous la forme d'un terme `task_*(g)`, sans énumération, et n'est pas imputée à `max_candidates`. Les règles locales choisissent le descripteur à longueur de description minimale et exigent deux cellules de support par clé modifiée. Les opérateurs `task_*` ne sont jamais promus en mémoire.
+- **Conséquences et limites** : un ajustement exact est un indice, pas une preuve de généralisation. Les descripteurs et familles sont manuels. La mémoire archivée de l'ADR-007 n'est plus importable. Le score 100/400 est une mesure de développement sur `training`, non indépendante.

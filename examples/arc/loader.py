@@ -9,28 +9,7 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
-
-@dataclass(frozen=True)
-class Grid:
-    """An immutable 2D grid of colors (0-9)."""
-
-    cells: tuple[tuple[int, ...], ...]
-
-    @property
-    def height(self) -> int:
-        return len(self.cells)
-
-    @property
-    def width(self) -> int:
-        return len(self.cells[0]) if self.cells else 0
-
-    @property
-    def colors(self) -> tuple[int, ...]:
-        return tuple(sorted({cell for row in self.cells for cell in row}))
-
-    def __getitem__(self, position: tuple[int, int]) -> int:
-        row, column = position
-        return self.cells[row][column]
+from epistemic_sdk.algorithms.grid_objects import Grid as Grid
 
 
 @dataclass(frozen=True)

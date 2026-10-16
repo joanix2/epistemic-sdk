@@ -48,7 +48,11 @@ class UnitDiscoveryTests(unittest.TestCase):
         self.assertIn(disc.family, ("rotation", "composition"))
 
     def test_discovers_flip_horizontal(self):
-        train = (Example(Grid(((1, 2, 3), (4, 5, 6))), Grid(((3, 2, 1), (6, 5, 4)))),)
+        # A second example distinguishes reflection from a fitted color permutation.
+        train = (
+            Example(Grid(((1, 2, 3), (4, 5, 6))), Grid(((3, 2, 1), (6, 5, 4)))),
+            Example(Grid(((1, 3, 2), (6, 4, 5))), Grid(((2, 3, 1), (5, 4, 6)))),
+        )
         test = (Example(Grid(((7, 8), (9, 0))), Grid(((8, 7), (0, 9)))),)
         disc = discover_task(Task(id="test_flip_h", train=train, test=test))
         self.assertTrue(disc.solved)

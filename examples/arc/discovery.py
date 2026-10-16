@@ -182,9 +182,7 @@ def discover_task(task: Task, *, max_nodes: int = 4, max_cells: int = MAX_CELLS)
     discovery = LanguageDiscovery(
         language, ("g",), evaluate, domain, max_nodes=max_nodes
     )
-    result = discovery.discover(
-        training, {"g": task.test[0].input}, task.test[0].output
-    )
+    result = discovery.fit(training)
 
     program = result.program
     solved = program is not None and all(
@@ -194,4 +192,4 @@ def discover_task(task: Task, *, max_nodes: int = 4, max_cells: int = MAX_CELLS)
 
     families_used = _families_used(program)
     family = _classify_family(program)
-    return TaskDiscovery(task.id, program, result.language, solved, family, families_used)
+    return TaskDiscovery(task.id, program, language, solved, family, families_used)

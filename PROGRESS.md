@@ -6,6 +6,7 @@
 - Nouvelles familles `tiling`, `partition`, `extraction`, `local_rule`, chacune avec une variante `*_cropped`. Leurs paramètres sont estimés sur les exemples d'entraînement par des apprenants (`fitting`, `layout_learners`, `extraction_learners`, `local_rule`, descripteurs de cellule dans `grid_features`). Ils sont vérifiés directement et non énumérés ; leur coût n'est pas imputé au budget `max_candidates`.
 - Les anciens chiffres d'évaluation (4/400) et la mémoire archivée `memory.json` correspondent à l'architecture précédente : la mémoire n'est plus importable (familles et primitives modifiées) et ne sont pas comparables au nouveau code.
 - 180 tests, Ruff, mypy (143 fichiers) et harness check passent ; 41 exports publics inchangés.
+- **Dette technique (règle critique d'AGENTS.md)** : les 9 apprenants `task_*` sont des fonctions complexes écrites en dur. Sur `training`, environ 70 des 100 tâches résolues en dépendent (33 `task_local_rule`, 12 `task_tiling`, 11 `task_partition`) ; seules environ 30 viennent de primitives composées par recherche. Le score de 100/400 ne mesure donc pas la découverte. À mesurer en ablation, puis à remplacer par des compositions de primitives retrouvées et promues ; ne pas les étendre.
 
 ## État précédent (26/400)
 

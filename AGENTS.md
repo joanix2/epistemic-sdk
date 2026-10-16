@@ -56,6 +56,24 @@ Le bon programme peut être isolé dans un espace de recherche immense, **sans g
 
 L'expérience booléenne (`examples/boolean_operator_discovery/`) teste surtout la **découverte**, la **composition** et la **réfutation**. Elle **ne résout pas encore** le problème général de la recherche dans un espace de programmes arbitraires.
 
+## Règle critique : pas de fonction complexe écrite en dur
+
+Un score qui monte grâce à une fonction complexe écrite à la main donne l'impression de réussir, mais c'est de la **dette technique** : la connaissance est dans le code de l'humain, pas découverte par le système. Cette règle prime sur tout objectif de score.
+
+**Autorisé (primitives de base, petites, typées, réutilisables)** : logique booléenne (`and`, `or`, `xor`, `not`), transformations spatiales (flip, rotation, transposition, décalage, scale, découpe, concaténation), changement de couleur, morphologie (composantes, trous, dilatation). Estimer une **constante** (couleur, entier, table de recoloration) sur les observations est aussi autorisé.
+
+**Interdit** :
+- Écrire en dur une fonction complexe (tuilage, partition/combinaison, fractale, extraction, règle locale, etc.) qui encode la structure d'une solution, y compris sous forme d'« apprenant », de « famille ajustée » ou d'opérateur `task_*`.
+- Ajouter une primitive dont le nom ou le comportement correspond à une tâche, à une famille de tâches ou à une solution observée dans les données.
+- Régler une heuristique en lisant les échecs d'un jeu de tâches puis rapporter le score obtenu sur ce même jeu comme une capacité du système.
+
+**Obligatoire** :
+- Une fonction complexe est une **composition de primitives retrouvée par recherche**, puis **stockée** par le système (promotion en opérateur `candidate`, version, provenance, validation indépendante).
+- Tout programme retenu doit rester un terme M1 lisible : on doit pouvoir y lire les étapes (séparer, intersecter, recolorer…), pas un opérateur opaque ou une fermeture.
+- Avant d'ajouter du code qui améliore un score, se demander : « est-ce une primitive, ou la solution déguisée ? » En cas de doute, ne pas l'ajouter et en discuter avec l'utilisateur.
+- Tout score est rapporté avec sa décomposition : tâches résolues par primitives composées, par apprenant/opérateur écrit en dur, et par abstraction promue. Seuls les deux dernières lignes ne comptent pas comme découverte.
+- Un code existant qui viole cette règle est de la dette : le marquer comme tel (docstring, `PROGRESS.md`), le mesurer en ablation, et le supprimer quand la recherche retrouve les mêmes tâches. Ne jamais l'étendre.
+
 ## Boucle épistémique active
 
 Au-delà de la boucle passive (les observations sont données), le SDK vise une boucle **active** : la connaissance reconfigure la politique expérimentale.
@@ -98,6 +116,7 @@ Au-delà de la boucle passive (les observations sont données), le SDK vise une 
 9. La validation porte sur des résultats d'exécution confrontés à des observations **indépendantes** (aucune fuite entraînement/test).
 10. Toute connaissance préserve la provenance de ses hypothèses, exécutions et validations.
 11. Une connaissance n'est pas seulement une croyance ; elle détermine quelles observations valent la peine d'être recherchées.
+12. Les fonctions complexes sont retrouvées et stockées par le système, jamais écrites en dur (voir « Règle critique »).
 
 ## Conventions Python et typage
 

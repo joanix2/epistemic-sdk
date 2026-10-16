@@ -2,9 +2,9 @@
 
 ## Mise à jour : apprenants ajustés à la tâche (développement uniquement)
 
-- La recherche par taxonomie atteint **100/400** sur `training` (contre 26/400 ci-dessous), mesure locale d'une seule prédiction par entrée, sans score officiel ARC Prize. Détail par famille et limites : `docs/experiments/arc-taxonomy/REPORT.md` (section « Apprenants ajustés à la tâche »).
+- La recherche par taxonomie atteint **100/400** sur `training` (contre 26/400 ci-dessous) et **48/400 (12 %) sur `evaluation`**, lancé une fois (contre 4/400 avant) ; l'évaluation n'est plus réservée, mesure locale d'une seule prédiction par entrée, sans score officiel ARC Prize. Détail par famille et limites : `docs/experiments/arc-taxonomy/REPORT.md` (section « Apprenants ajustés à la tâche »).
 - Nouvelles familles `tiling`, `partition`, `extraction`, `local_rule`, chacune avec une variante `*_cropped`. Leurs paramètres sont estimés sur les exemples d'entraînement par des apprenants (`fitting`, `layout_learners`, `extraction_learners`, `local_rule`, descripteurs de cellule dans `grid_features`). Ils sont vérifiés directement et non énumérés ; leur coût n'est pas imputé au budget `max_candidates`.
-- Les anciens chiffres d'évaluation (4/400) et la mémoire archivée `memory.json` correspondent à l'architecture précédente : la mémoire n'est plus importable (familles et primitives modifiées) et l'évaluation n'a pas été relancée avec le nouveau code. Ne pas les comparer au 100/400.
+- Les anciens chiffres d'évaluation (4/400) et la mémoire archivée `memory.json` correspondent à l'architecture précédente : la mémoire n'est plus importable (familles et primitives modifiées) et ne sont pas comparables au nouveau code.
 - 180 tests, Ruff, mypy (143 fichiers) et harness check passent ; 41 exports publics inchangés.
 
 ## État précédent (26/400)

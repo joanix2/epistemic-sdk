@@ -61,11 +61,13 @@ Après la mesure ci-dessus, quatre familles ont été ajoutées à la taxonomie 
 | Avant (section Résultats) | 26 (6,5 %) |
 | Avec apprenants ajustés | **100 (25 %)** |
 
+Mesure sur `evaluation`, lancée une seule fois avec ce code (mode taxonomie, sans mémoire) : **48/400 (12 %)**, archivée dans [evaluation-taxonomy-fitted.json](evaluation-taxonomy-fitted.json). C'est la meilleure estimation locale de généralisation ; l'écart avec les 25 % de `training` reflète le réglage sur ce jeu. Après cette lecture, `evaluation` n'est plus réservé : toute optimisation suivante guidée par lui exige un nouveau protocole.
+
 Par famille : règle locale 33, géométrie 20, tiling 15, partition 13, sélection d'objets 7, extraction 5, dynamique 3, topologie 2, symétrie 2. Résultat archivé : [training-taxonomy-fitted.json](training-taxonomy-fitted.json). Commande : `transfer_measure --mode taxonomy` sur `training`, avec `max_candidates=5000`.
 
 Précautions d'interprétation :
 
-- Mesure de développement uniquement : le code a été réglé en lisant les échecs de `training`. Ce n'est ni une validation indépendante ni un score ARC Prize. Le jeu `evaluation` n'a **pas** été relancé avec ce code ; les 4/400 plus haut décrivent l'ancienne architecture.
+- Mesure de développement uniquement : le code a été réglé en lisant les échecs de `training`. Ce n'est ni une validation indépendante ni un score ARC Prize. Les 4/400 d'évaluation de la section précédente décrivent l'ancienne architecture ; la mesure avec ce code est 48/400 (ci-dessus).
 - Un apprenant qui reproduit tous les exemples d'entraînement est un indice d'ajustement, pas une preuve de généralisation. Les règles locales exigent deux cellules de support par clé modifiée et choisissent le descripteur à longueur de description minimale ; les clés inconnues laissent la cellule inchangée, hypothèse vérifiée uniquement sur l'entraînement.
 - Les descripteurs, primitives et familles sont écrits à la main. Le gain mesure aussi cette expertise, pas la découverte autonome du langage.
 - Les apprenants sont vérifiés directement sur l'entraînement et ne comptent pas dans `max_candidates` ; les scores `candidates` ne sont donc pas comparables avec la section précédente. En mode plat, ils sont de simples opérateurs de la recherche énumérative.

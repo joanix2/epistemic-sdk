@@ -25,12 +25,30 @@ Quatre niveaux :
 
 ## Objectif principal de l'expérience de validation
 
-L'expérience de validation d'Epistemic SDK cherche à répondre à **trois problèmes fondamentaux** :
+L'expérience de validation d'Epistemic SDK cherche à répondre à **quatre problèmes fondamentaux** :
 
 1. **Découverte (inférence)** — comment générer une hypothèse, sous forme de programme déclaratif, à partir d'un ensemble limité d'observations, sans connaître la solution à l'avance ?
 2. **Composition (architecture)** — comment faire fonctionner ensemble les composants du SDK (observations, croyances, inférence, transformations, exécution, validation) sans créer de dépendances artificielles ?
 3. **Réfutation (révision des connaissances)** — comment utiliser de nouvelles observations pour identifier des contre-exemples, réfuter les hypothèses incompatibles et réviser les connaissances déjà acquises ?
 4. **Définition du sous-espace de recherche (définition automatique du M2)** — comment définir automatiquement le sous-espace de recherche (le langage M2) dans lequel l'inférence opère, plutôt que de le fixer manuellement ?
+
+### Recherche et création de langage (problème #4 en détail)
+
+Le langage M2 est lui-même une hypothèse : il détermine quels programmes M1 peuvent être exprimés, donc quelles hypothèses existent. Choisir M2 revient à choisir le sous-espace où chercher. Les objectifs, du plus simple au plus ambitieux :
+
+1. **Sélection** — parmi des familles de langages données (taxonomie de M2), choisir celle(s) à explorer pour une tâche, à partir des seules observations d'entraînement. *État : heuristique manuelle d'ordre de familles (`TaxonomicSolver`) ; aucune sélection apprise.*
+2. **Spécialisation** — dériver un M2 de tâche à partir de versions immuables de familles partagées (héritage, versions, provenance), y compris des opérateurs dont les paramètres sont estimés sur les observations (apprenants ajustés, ADR-008). *État : implémenté ; les descripteurs et familles de départ sont écrits à la main.*
+3. **Enrichissement** — promouvoir une composition corroborée en nouvel opérateur d'une famille (abstraction), avec statut `candidate`, provenance et versionnement. Le transfert entre tâches doit être mesuré en coût de recherche, pas seulement en nombre de réutilisations. *État : implémenté, gain de transfert non établi.*
+4. **Invention** — créer des sortes, opérateurs, axiomes ou familles absents du langage de départ, quand toutes les hypothèses d'un M2 échouent (montée de `P(abduire)`), puis les valider sur des observations indépendantes. *État : non résolu ; les primitives sont fournies par l'humain.*
+5. **Découverte de taxonomie** — organiser automatiquement les familles et les relations de transfert (conditions d'applicabilité, traductions entre représentations). *État : non résolu.*
+
+Exigences pour toute étape de recherche ou de création de langage :
+
+- Chaque langage créé ou modifié est versionné et porte sa provenance (observations, hypothèses, validations qui l'ont motivé).
+- Un langage est jugé sur des observations indépendantes de celles qui l'ont produit ; l'ajustement exact à l'entraînement est un indice, pas une preuve.
+- Un langage plus expressif élargit l'espace sans gradient : mesurer le coût (candidats, nœuds) autant que la couverture, et rapporter l'écart entre développement et évaluation.
+- Séparer strictement les niveaux : primitives (M0/M1) → descripteurs et apprenants → familles M2 → politique de choix de famille → révision des connaissances. Un module ne dépend que des niveaux inférieurs.
+- Les langages et leurs résultats restent révisables : un contre-exemple doit pouvoir invalider une abstraction promue et les résultats qui en dépendent.
 
 ### Problème plus profond : l'émergence
 

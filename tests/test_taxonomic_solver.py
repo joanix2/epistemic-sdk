@@ -103,10 +103,24 @@ class TaxonomicSolverTests(unittest.TestCase):
         assert result.program is not None
         names = operator_names(result.program)
         self.assertIn("and", names)
-        self.assertTrue({"keep_left", "keep_right"} <= set(names))
+        self.assertIn("task_recolor", names)
         self.assertEqual(result.scope.node_id if result.scope else None, "logic")
         self.assertEqual(result.predict(grid("1015111")), grid("202"))
-        self.assertLessEqual({n for n in names if n.startswith("task_")}, {"task_recolor"})
+
+    def test_two_sensors_generalize_where_a_coincidental_program_does_not(self):
+        training = [
+            (grid("1105011 0105111 1005000"), grid("020 020 000")),
+            (grid("1105010 0015111 1105010"), grid("020 002 020")),
+            (grid("0015000 1105101 0115101"), grid("000 200 002")),
+        ]
+        result = TaxonomicSolver().solve("sensors", training)
+        assert result.program is not None
+        names = operator_names(result.program)
+        self.assertIn("and", names)
+        self.assertIn("task_recolor", names)
+        self.assertEqual(result.predict(grid("1015101 0105101 1015010")),
+                         grid("202 000 000"))
+        self.assertEqual(result.predict(grid("1105011")), grid("020"))
 
     def test_macros_preserve_intermediate_execution_bounds(self):
         solver = TaxonomicSolver()

@@ -53,6 +53,8 @@ def build_arc_taxonomy() -> tuple[LanguageTaxonomy, dict[str, LanguageRef]]:
             "top", "bottom", "left", "right",
             "top_left", "top_right", "bottom_left", "bottom_right")
     }
+    parts.update({f"window_{anchor}": partial(transforms.window, anchor=anchor)
+                  for anchor in ("start", "end")})
     resizing: dict[str, Callable[..., Any]] = {
         "crop": transforms.crop,
         "upscale_2": partial(transforms.upscale, factor=2),

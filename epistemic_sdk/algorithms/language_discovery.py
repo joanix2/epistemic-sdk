@@ -7,7 +7,7 @@ corroborated program is not already a primitive — lift it into a new operator
 experiments: it works for any function over a finite domain, not a hardcoded
 target.
 """
-from collections.abc import Callable, Mapping, Sequence
+from collections.abc import Callable, Hashable, Mapping, Sequence
 from dataclasses import dataclass
 from typing import Any
 
@@ -19,6 +19,22 @@ from epistemic_sdk.m3.variable import Variable
 from .operator_invention import OperatorInvention
 from .semantic_equivalence import SemanticEquivalence
 from .synthesis import enumerate_terms
+from .typed_search import EnumerationBudget, EnumerationLimit, enumerate_typed_terms
+
+
+@dataclass(frozen=True)
+class FitResult:
+    """Training-only selection; consistency does not imply corroboration.
+
+    ``exhausted`` is true only if the entire bounded search was visited.
+    Candidate count measures tested result terms, not interpreter calls.
+    """
+
+    program: Term | None
+    candidates: tuple[Term, ...]
+    evaluated: int
+    exhausted: bool
+    generated: int = 0
 
 
 @dataclass(frozen=True)
@@ -38,12 +54,81 @@ class LanguageDiscovery:
         domain: Sequence[Any],
         *,
         max_nodes: int = 9,
+        variable_sorts: Mapping[str, str] | None = None,
+        result_sort: str | None = None,
+        signature: Callable[[Term], Hashable | None] | None = None,
+        complete: Callable[[Term], Term | None] | None = None,
     ) -> None:
         self._base_language = base_language
         self._variables = variables
         self._evaluate = evaluate
         self._domain = tuple(domain)
         self._max_nodes = max_nodes
+        self._variable_sorts = variable_sorts
+        self._result_sort = result_sort
+        self._signature = signature
+        self._complete = complete
+
+    def fit(
+        self,
+        training: Sequence[tuple[Mapping[str, Any], Any]],
+        *,
+        max_candidates: int = 100_000,
+        max_results: int = 1,
+        max_generated: int = 50_000,
+    ) -> FitResult:
+        """Select programs without receiving any validation outputs.
+
+        Retain distinct training-consistent programs when ``max_results > 1``.
+        A ``signature`` enables observational deduplication, which hides those
+        duplicates; use it only to find a smallest consistent program.
+        A ``complete`` hook replaces the exact-match test: it returns the program
+        to retain (a candidate possibly completed with constants estimated from
+        the training pairs) or ``None``.
+        Domain probes are not needed here: the optional quotient uses training inputs only.
+        Evaluators must represent inapplicable programs by a non-output value;
+        unexpected exceptions are intentionally not swallowed.
+        """
+        if max_candidates < 1 or max_results < 1 or max_generated < 1:
+            raise ValueError("search budgets must be positive")
+        if not training:
+            return FitResult(None, (), 0, True)
+        sorts = tuple(sort.name for sort in self._base_language.sorts)
+        if self._variable_sorts is None:
+            if len(sorts) != 1:
+                raise ValueError("multi-sort search requires variable_sorts")
+            variable_sorts: Mapping[str, str] = dict.fromkeys(self._variables, sorts[0])
+        else:
+            variable_sorts = self._variable_sorts
+        result_sort = self._result_sort or (sorts[0] if len(sorts) == 1 else None)
+        if result_sort is None:
+            raise ValueError("multi-sort search requires result_sort")
+        variables = tuple(Variable(name, variable_sorts[name]) for name in self._variables)
+        candidates: list[Term] = []
+        evaluated = 0
+        budget = EnumerationBudget(max_generated)
+        try:
+            for term in enumerate_typed_terms(
+                self._base_language, variables, result_sort, self._max_nodes, budget,
+                self._signature,
+            ):
+                evaluated += 1
+                found = self._complete(term) if self._complete else (
+                    term if all(self._evaluate(term, inputs) == output
+                                for inputs, output in training) else None)
+                if found is not None:
+                    candidates.append(found)
+                    if len(candidates) == max_results:
+                        return FitResult(candidates[0], tuple(candidates), evaluated, False,
+                                         budget.generated)
+                if evaluated == max_candidates:
+                    return FitResult(candidates[0] if candidates else None,
+                                     tuple(candidates), evaluated, False, budget.generated)
+        except EnumerationLimit:
+            return FitResult(candidates[0] if candidates else None, tuple(candidates),
+                             evaluated, False, budget.generated)
+        return FitResult(candidates[0] if candidates else None,
+                         tuple(candidates), evaluated, True, budget.generated)
 
     def discover(
         self,
@@ -51,6 +136,12 @@ class LanguageDiscovery:
         test_inputs: Mapping[str, Any],
         test_output: Any,
     ) -> DiscoveryResult:
+        """Explore hypotheses using a labelled validation observation.
+
+        This historical API selects among corroborated candidates and therefore
+        uses the supplied label for model selection. For an unbiased prediction
+        score use ``fit`` followed by evaluation on untouched observations.
+        """
         functions = self._consistent_functions(training)
         corroborated = tuple(
             term

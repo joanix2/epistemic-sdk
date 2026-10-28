@@ -1,0 +1,1174 @@
+{
+  "format": 1,
+  "promotions": [
+    {
+      "definition": "Application(operator='object_crop', arguments=(Application(operator='select_largest', arguments=(Application(operator='components_4_foreground', arguments=(Variable(name='g', sort='Grid'),)),)),))",
+      "operator": "learned_66758ca1b319",
+      "scope": "object_selection",
+      "task_id": "1f85a75f"
+    },
+    {
+      "definition": "Application(operator='object_crop', arguments=(Application(operator='select_smallest', arguments=(Application(operator='components_4_color', arguments=(Variable(name='g', sort='Grid'),)),)),))",
+      "operator": "learned_ff1f74ca3076",
+      "scope": "object_selection",
+      "task_id": "23b5c85d"
+    },
+    {
+      "definition": "Application(operator='object_crop', arguments=(Application(operator='select_smallest', arguments=(Application(operator='components_8_foreground', arguments=(Variable(name='g', sort='Grid'),)),)),))",
+      "operator": "learned_ce9c6c79c44e",
+      "scope": "object_selection",
+      "task_id": "39a8645d"
+    },
+    {
+      "definition": "Application(operator='flip_horizontal', arguments=(Application(operator='crop', arguments=(Variable(name='g', sort='Grid'),)),))",
+      "operator": "learned_0744fbfedbd8",
+      "scope": "geometry",
+      "task_id": "7468f01a"
+    },
+    {
+      "definition": "Application(operator='object_crop', arguments=(Application(operator='select_unique_shape', arguments=(Application(operator='components_8_foreground', arguments=(Variable(name='g', sort='Grid'),)),)),))",
+      "operator": "learned_68bdc99eb8af",
+      "scope": "object_selection",
+      "task_id": "88a62173"
+    },
+    {
+      "definition": "Application(operator='object_crop', arguments=(Application(operator='select_largest', arguments=(Application(operator='components_8_color', arguments=(Variable(name='g', sort='Grid'),)),)),))",
+      "operator": "learned_41515810aa74",
+      "scope": "object_selection",
+      "task_id": "a87f7484"
+    },
+    {
+      "definition": "Application(operator='crop_bbox', arguments=(Variable(name='g', sort='Grid'), Application(operator='select_unique_color', arguments=(Application(operator='components_4_color', arguments=(Variable(name='g', sort='Grid'),)),))))",
+      "operator": "learned_8010fc042bf3",
+      "scope": "object_selection",
+      "task_id": "c909285e"
+    },
+    {
+      "definition": "Application(operator='crop', arguments=(Application(operator='upscale_2', arguments=(Variable(name='g', sort='Grid'),)),))",
+      "operator": "learned_5d422ab8c572",
+      "scope": "geometry",
+      "task_id": "f25fbde4"
+    }
+  ],
+  "scopes": {
+    "geometry": [
+      "geometry",
+      "3"
+    ],
+    "object_geometry": [
+      "object_geometry",
+      "9"
+    ],
+    "object_selection": [
+      "object_selection",
+      "7"
+    ],
+    "symmetry": [
+      "symmetry",
+      "1"
+    ],
+    "topology": [
+      "topology",
+      "1"
+    ]
+  },
+  "taxonomy": {
+    "format": 1,
+    "nodes": [
+      {
+        "learned": [],
+        "parents": [],
+        "primitives": [],
+        "ref": [
+          "grid",
+          "1"
+        ],
+        "sorts": [
+          "Grid"
+        ]
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "grid",
+            "1"
+          ]
+        ],
+        "primitives": [
+          [
+            "flip_horizontal",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "flip_vertical",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "rotate_90",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "rotate_180",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "rotate_270",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "transpose",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "anti_transpose",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "crop",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "upscale_2",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "upscale_3",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "pad_square",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ]
+        ],
+        "ref": [
+          "geometry",
+          "1"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "grid",
+            "1"
+          ]
+        ],
+        "primitives": [
+          [
+            "components_4_foreground",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_4_foreground_majority",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_4_color",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_4_color_majority",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_8_foreground",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_8_foreground_majority",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_8_color",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ],
+          [
+            "components_8_color_majority",
+            [
+              "Grid"
+            ],
+            "Objects"
+          ]
+        ],
+        "ref": [
+          "objects",
+          "1"
+        ],
+        "sorts": [
+          "Objects",
+          "Object"
+        ]
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "objects",
+            "1"
+          ]
+        ],
+        "primitives": [
+          [
+            "select_largest",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_smallest",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_most_colors",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_least_colors",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_widest",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_tallest",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_largest_bbox",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_smallest_bbox",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_unique_shape",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "select_unique_color",
+            [
+              "Objects"
+            ],
+            "Object"
+          ],
+          [
+            "object_crop",
+            [
+              "Object"
+            ],
+            "Grid"
+          ],
+          [
+            "crop_bbox",
+            [
+              "Grid",
+              "Object"
+            ],
+            "Grid"
+          ]
+        ],
+        "ref": [
+          "object_selection",
+          "1"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "grid",
+            "1"
+          ]
+        ],
+        "primitives": [
+          [
+            "complete_vertical",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "complete_horizontal",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "complete_both",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "complete_main_diagonal",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "complete_anti_diagonal",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ]
+        ],
+        "ref": [
+          "symmetry",
+          "1"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "grid",
+            "1"
+          ]
+        ],
+        "primitives": [
+          [
+            "fill_holes_1",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_2",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_3",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_4",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_5",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_6",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_7",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_8",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "fill_holes_9",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "remove_noise_1",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "remove_noise_2",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ],
+          [
+            "remove_noise_3",
+            [
+              "Grid"
+            ],
+            "Grid"
+          ]
+        ],
+        "ref": [
+          "topology",
+          "1"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "1"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "kind": "variable",
+                          "name": "g",
+                          "sort": "Grid"
+                        }
+                      ],
+                      "kind": "application",
+                      "operator": "components_4_foreground"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "select_largest"
+                }
+              ],
+              "kind": "application",
+              "operator": "object_crop"
+            },
+            "evidence_ids": [
+              "1f85a75f:train:0",
+              "1f85a75f:train:1"
+            ],
+            "name": "learned_66758ca1b319",
+            "origin_task_ids": [
+              "1f85a75f"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "object_selection",
+              "1"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "object_selection",
+            "1"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_selection",
+          "2"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "object_selection",
+            "2"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "2"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "kind": "variable",
+                          "name": "g",
+                          "sort": "Grid"
+                        }
+                      ],
+                      "kind": "application",
+                      "operator": "components_4_color"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "select_smallest"
+                }
+              ],
+              "kind": "application",
+              "operator": "object_crop"
+            },
+            "evidence_ids": [
+              "23b5c85d:train:0",
+              "23b5c85d:train:1",
+              "23b5c85d:train:2",
+              "23b5c85d:train:3",
+              "23b5c85d:train:4"
+            ],
+            "name": "learned_ff1f74ca3076",
+            "origin_task_ids": [
+              "23b5c85d"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "object_selection",
+              "2"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "object_selection",
+            "2"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_selection",
+          "3"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "object_selection",
+            "3"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "3"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "kind": "variable",
+                          "name": "g",
+                          "sort": "Grid"
+                        }
+                      ],
+                      "kind": "application",
+                      "operator": "components_8_foreground"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "select_smallest"
+                }
+              ],
+              "kind": "application",
+              "operator": "object_crop"
+            },
+            "evidence_ids": [
+              "39a8645d:train:0",
+              "39a8645d:train:1",
+              "39a8645d:train:2"
+            ],
+            "name": "learned_ce9c6c79c44e",
+            "origin_task_ids": [
+              "39a8645d"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "object_selection",
+              "3"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "object_selection",
+            "3"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_selection",
+          "4"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "object_selection",
+            "4"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "4"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "kind": "variable",
+                      "name": "g",
+                      "sort": "Grid"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "crop"
+                }
+              ],
+              "kind": "application",
+              "operator": "flip_horizontal"
+            },
+            "evidence_ids": [
+              "7468f01a:train:0",
+              "7468f01a:train:1",
+              "7468f01a:train:2"
+            ],
+            "name": "learned_0744fbfedbd8",
+            "origin_task_ids": [
+              "7468f01a"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "geometry",
+              "1"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "geometry",
+            "1"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "geometry",
+          "2"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "2"
+          ],
+          [
+            "object_selection",
+            "4"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "5"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "kind": "variable",
+                          "name": "g",
+                          "sort": "Grid"
+                        }
+                      ],
+                      "kind": "application",
+                      "operator": "components_8_foreground"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "select_unique_shape"
+                }
+              ],
+              "kind": "application",
+              "operator": "object_crop"
+            },
+            "evidence_ids": [
+              "88a62173:train:0",
+              "88a62173:train:1",
+              "88a62173:train:2"
+            ],
+            "name": "learned_68bdc99eb8af",
+            "origin_task_ids": [
+              "88a62173"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "object_selection",
+              "4"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "object_selection",
+            "4"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_selection",
+          "5"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "2"
+          ],
+          [
+            "object_selection",
+            "5"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "6"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "kind": "variable",
+                          "name": "g",
+                          "sort": "Grid"
+                        }
+                      ],
+                      "kind": "application",
+                      "operator": "components_8_color"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "select_largest"
+                }
+              ],
+              "kind": "application",
+              "operator": "object_crop"
+            },
+            "evidence_ids": [
+              "a87f7484:train:0",
+              "a87f7484:train:1",
+              "a87f7484:train:2",
+              "a87f7484:train:3"
+            ],
+            "name": "learned_41515810aa74",
+            "origin_task_ids": [
+              "a87f7484"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "object_selection",
+              "5"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "object_selection",
+            "5"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_selection",
+          "6"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "2"
+          ],
+          [
+            "object_selection",
+            "6"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "7"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "kind": "variable",
+                  "name": "g",
+                  "sort": "Grid"
+                },
+                {
+                  "arguments": [
+                    {
+                      "arguments": [
+                        {
+                          "kind": "variable",
+                          "name": "g",
+                          "sort": "Grid"
+                        }
+                      ],
+                      "kind": "application",
+                      "operator": "components_4_color"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "select_unique_color"
+                }
+              ],
+              "kind": "application",
+              "operator": "crop_bbox"
+            },
+            "evidence_ids": [
+              "c909285e:train:0",
+              "c909285e:train:1",
+              "c909285e:train:2"
+            ],
+            "name": "learned_8010fc042bf3",
+            "origin_task_ids": [
+              "c909285e"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "object_selection",
+              "6"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "object_selection",
+            "6"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_selection",
+          "7"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "2"
+          ],
+          [
+            "object_selection",
+            "7"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "8"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [
+          {
+            "definition": {
+              "arguments": [
+                {
+                  "arguments": [
+                    {
+                      "kind": "variable",
+                      "name": "g",
+                      "sort": "Grid"
+                    }
+                  ],
+                  "kind": "application",
+                  "operator": "upscale_2"
+                }
+              ],
+              "kind": "application",
+              "operator": "crop"
+            },
+            "evidence_ids": [
+              "f25fbde4:train:0",
+              "f25fbde4:train:1",
+              "f25fbde4:train:2"
+            ],
+            "name": "learned_5d422ab8c572",
+            "origin_task_ids": [
+              "f25fbde4"
+            ],
+            "result_sort": "Grid",
+            "scope": [
+              "geometry",
+              "2"
+            ],
+            "status": "candidate",
+            "variables": [
+              [
+                "g",
+                "Grid"
+              ]
+            ]
+          }
+        ],
+        "parents": [
+          [
+            "geometry",
+            "2"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "geometry",
+          "3"
+        ],
+        "sorts": []
+      },
+      {
+        "learned": [],
+        "parents": [
+          [
+            "geometry",
+            "3"
+          ],
+          [
+            "object_selection",
+            "7"
+          ]
+        ],
+        "primitives": [],
+        "ref": [
+          "object_geometry",
+          "9"
+        ],
+        "sorts": []
+      }
+    ]
+  }
+}

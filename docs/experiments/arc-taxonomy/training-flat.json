@@ -1,0 +1,8883 @@
+{
+  "benchmark": "public ARC-AGI-1; one selected prediction; all test pairs must match",
+  "mode": "flat",
+  "total": 400,
+  "solved": 20,
+  "score_percent": 5.0,
+  "max_candidates": 5000,
+  "max_nodes": 5,
+  "global_max_nodes": 3,
+  "seconds": 38.83004345199879,
+  "dataset_sha256": "463a92a26c5d819735de584c8291c4e2056fc9d0d074b1b4600bf0f62479acbd",
+  "source_sha256": "6b3682cabbb4f4655c94019b1f3bdeb3d28ad6c911333f0917a23af1e8a9ddbc",
+  "memory_sha256": "c15b617303953c75fb02bb5647525d4dee00034fdb5d17cb64f2e976dc6ed88a",
+  "source_dataset_sha256": null,
+  "definitions": 0,
+  "reused_tasks": 0,
+  "reused_solved": 0,
+  "candidates": 1890805,
+  "by_scope": {
+    "flat": 20
+  },
+  "tasks": [
+    {
+      "task_id": "007bbfb7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "00d62c1b",
+      "solved": true,
+      "program": "Application(operator='fill_holes_4', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:00d62c1b:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "2"
+          ],
+          [
+            "task:00d62c1b:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 21,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            4,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            4,
+            4,
+            4,
+            3,
+            4,
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            3,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            4,
+            4,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            4,
+            3,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            3,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            4,
+            4,
+            4,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "7bcfad95-5617-48dc-8230-afa391cb0bb6",
+          "hypothesis_id": "00d62c1b:9b596ff67c65",
+          "execution_id": "42bed9bb-dcc3-41ba-951d-6cb8dc1048a5",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "00d62c1b:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "00d62c1b:belief:0",
+          "observation_id": "00d62c1b:train:0"
+        },
+        {
+          "belief_id": "00d62c1b:belief:1",
+          "observation_id": "00d62c1b:train:1"
+        },
+        {
+          "belief_id": "00d62c1b:belief:2",
+          "observation_id": "00d62c1b:train:2"
+        },
+        {
+          "belief_id": "00d62c1b:belief:3",
+          "observation_id": "00d62c1b:train:3"
+        },
+        {
+          "belief_id": "00d62c1b:belief:4",
+          "observation_id": "00d62c1b:train:4"
+        }
+      ]
+    },
+    {
+      "task_id": "017c7c7b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "025d127b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "045e512c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0520fde7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "05269061",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "05f2a901",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "06df4c85",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "08ed6ac7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "09629e4f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0962bcdd",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0a938d79",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0b148d64",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0ca9ddb6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0d3d703e",
+      "solved": true,
+      "program": "Application(operator='task_recolor', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:0d3d703e:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "16"
+          ],
+          [
+            "task:0d3d703e:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 30,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            9,
+            5,
+            4
+          ],
+          [
+            9,
+            5,
+            4
+          ],
+          [
+            9,
+            5,
+            4
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "0c28310c-c080-45d9-a281-ee279c4e4fe2",
+          "hypothesis_id": "0d3d703e:0c49cabe9a7b",
+          "execution_id": "a759c42a-0cb8-417e-a564-32d4ad94c2e6",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "0d3d703e:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "0d3d703e:belief:0",
+          "observation_id": "0d3d703e:train:0"
+        },
+        {
+          "belief_id": "0d3d703e:belief:1",
+          "observation_id": "0d3d703e:train:1"
+        },
+        {
+          "belief_id": "0d3d703e:belief:2",
+          "observation_id": "0d3d703e:train:2"
+        },
+        {
+          "belief_id": "0d3d703e:belief:3",
+          "observation_id": "0d3d703e:train:3"
+        }
+      ]
+    },
+    {
+      "task_id": "0dfd9992",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "0e206a2e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "10fcaaa3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "11852cab",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1190e5a7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "137eaa0f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "150deff5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "178fcbfb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1a07d186",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1b2d62fb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1b60fb0c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1bfc4729",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1c786137",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1caeab9d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1cf80156",
+      "solved": true,
+      "program": "Application(operator='crop', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:1cf80156:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "31"
+          ],
+          [
+            "task:1cf80156:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 9,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            6,
+            6,
+            6,
+            6
+          ],
+          [
+            0,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            0,
+            6,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            6,
+            6,
+            6,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "ab3bc27b-0ca1-403d-918c-1fed3098a060",
+          "hypothesis_id": "1cf80156:f9953fa48d87",
+          "execution_id": "e53a8689-7d01-4f40-a946-56ccb9e54328",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "1cf80156:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "1cf80156:belief:0",
+          "observation_id": "1cf80156:train:0"
+        },
+        {
+          "belief_id": "1cf80156:belief:1",
+          "observation_id": "1cf80156:train:1"
+        },
+        {
+          "belief_id": "1cf80156:belief:2",
+          "observation_id": "1cf80156:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "1e0a9b12",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1e32b0e9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1f0c79e5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1f642eb9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1f85a75f",
+      "solved": false,
+      "program": "Application(operator='crop', arguments=(Application(operator='remove_noise_2', arguments=(Variable(name='g', sort='Grid'),)),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:1f85a75f:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "36"
+          ],
+          [
+            "task:1f85a75f:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 252,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8,
+            8,
+            8,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "cce60d5b-31da-437f-8265-5fac7e4e29ba",
+          "hypothesis_id": "1f85a75f:28b42a63ba31",
+          "execution_id": "c1abb74b-4334-4210-bfb0-787fd5da9e01",
+          "status": "refuted",
+          "supporting_observation_ids": [],
+          "counterexample_ids": [
+            "1f85a75f:test:0"
+          ]
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "1f85a75f:belief:0",
+          "observation_id": "1f85a75f:train:0"
+        },
+        {
+          "belief_id": "1f85a75f:belief:1",
+          "observation_id": "1f85a75f:train:1"
+        }
+      ]
+    },
+    {
+      "task_id": "1f876c06",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "1fad071e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2013d3e2",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2204b7a8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "22168020",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "22233c11",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2281f1f4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "228f6490",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "22eb0ac0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "234bbc79",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "23581191",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "239be575",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "23b5c85d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "253bf280",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "25d487eb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "25d8a9c8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "25ff71a9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "264363fd",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "272f95fa",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "27a28665",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "28bf18c6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "28e73c20",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "29623171",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "29c11459",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "29ec7d0e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2bcee788",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2bee17df",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2c608aff",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2dc579da",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2dd70a9a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "2dee498d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "31aa019c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "321b1fc6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "32597951",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3345333e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3428a4f5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3618c87e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3631a71a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "363442ee",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "36d67576",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "36fdfd69",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3906de3d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "39a8645d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "39e1d7f9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3aa6fb7a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3ac3eb23",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3af2c5a8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3bd67248",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3bdb4ada",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3befdf3e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3c9b0459",
+      "solved": true,
+      "program": "Application(operator='rotate_180', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:3c9b0459:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "87"
+          ],
+          [
+            "task:3c9b0459:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 5,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            7,
+            6,
+            4
+          ],
+          [
+            4,
+            6,
+            6
+          ],
+          [
+            4,
+            4,
+            6
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "c9e29c31-cf8f-40ce-9568-31dd496730c8",
+          "hypothesis_id": "3c9b0459:2041b7175763",
+          "execution_id": "8b03ba83-351f-4136-8413-81ced44799d1",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "3c9b0459:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "3c9b0459:belief:0",
+          "observation_id": "3c9b0459:train:0"
+        },
+        {
+          "belief_id": "3c9b0459:belief:1",
+          "observation_id": "3c9b0459:train:1"
+        },
+        {
+          "belief_id": "3c9b0459:belief:2",
+          "observation_id": "3c9b0459:train:2"
+        },
+        {
+          "belief_id": "3c9b0459:belief:3",
+          "observation_id": "3c9b0459:train:3"
+        }
+      ]
+    },
+    {
+      "task_id": "3de23699",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3e980e27",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3eda0437",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "3f7978a0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "40853293",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4093f84a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "41e4d17e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4258a5f9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4290ef0e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "42a50994",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4347f46a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "444801d8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "445eab21",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "447fd412",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "44d8ac46",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "44f52bb0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4522001f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4612dd53",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "46442a0e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "469497ad",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "46f33fce",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "47c1f68c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "484b58aa",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "48d8fb45",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4938f0c2",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "496994bd",
+      "solved": true,
+      "program": "Application(operator='complete_horizontal', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:496994bd:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "113"
+          ],
+          [
+            "task:496994bd:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 14,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            5,
+            5,
+            5,
+            5,
+            5,
+            5
+          ],
+          [
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "cc24fb56-406e-47fc-a7dd-5cde144def30",
+          "hypothesis_id": "496994bd:5c8bd48fa712",
+          "execution_id": "214bdbd5-2209-444e-b20d-a29e8982e479",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "496994bd:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "496994bd:belief:0",
+          "observation_id": "496994bd:train:0"
+        },
+        {
+          "belief_id": "496994bd:belief:1",
+          "observation_id": "496994bd:train:1"
+        }
+      ]
+    },
+    {
+      "task_id": "49d1d64f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4be741c5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4c4377d9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "4c5c2cf0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "50846271",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "508bd3b6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "50cb2852",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5117e062",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5168d44c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "539a4f51",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "53b68214",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "543a7ed5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "54d82841",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "54d9e175",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5521c0d9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5582e5ca",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5614dbcf",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "56dc2b01",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "56ff96f3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "57aa92db",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5ad4f10b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5bd6f4ac",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5c0a986e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5c2c9af4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "5daaa586",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "60b61512",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6150a2bd",
+      "solved": true,
+      "program": "Application(operator='rotate_180', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:6150a2bd:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "140"
+          ],
+          [
+            "task:6150a2bd:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 5,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            8,
+            6
+          ],
+          [
+            5,
+            3,
+            6
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "4c948c01-2422-4b15-a67e-bad7b6a90426",
+          "hypothesis_id": "6150a2bd:2041b7175763",
+          "execution_id": "8979afbb-ae92-407a-9b68-ea920b3cf22b",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "6150a2bd:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "6150a2bd:belief:0",
+          "observation_id": "6150a2bd:train:0"
+        },
+        {
+          "belief_id": "6150a2bd:belief:1",
+          "observation_id": "6150a2bd:train:1"
+        }
+      ]
+    },
+    {
+      "task_id": "623ea044",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "62c24649",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "63613498",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6430c8c4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6455b5f5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "662c240a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "67385a82",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "673ef223",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6773b310",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "67a3c6ac",
+      "solved": true,
+      "program": "Application(operator='flip_horizontal', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:67a3c6ac:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "150"
+          ],
+          [
+            "task:67a3c6ac:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 2,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            1,
+            6,
+            7
+          ],
+          [
+            6,
+            7,
+            6
+          ],
+          [
+            2,
+            2,
+            6
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "4719f3ce-565a-4789-9420-9fc91655f91d",
+          "hypothesis_id": "67a3c6ac:02c9fed0505b",
+          "execution_id": "2cc5ec90-47e8-4b80-83ca-32dbfbec1781",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "67a3c6ac:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "67a3c6ac:belief:0",
+          "observation_id": "67a3c6ac:train:0"
+        },
+        {
+          "belief_id": "67a3c6ac:belief:1",
+          "observation_id": "67a3c6ac:train:1"
+        },
+        {
+          "belief_id": "67a3c6ac:belief:2",
+          "observation_id": "67a3c6ac:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "67a423a3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "67e8384a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "681b3aeb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6855a6e4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "68b16354",
+      "solved": true,
+      "program": "Application(operator='flip_vertical', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:68b16354:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "155"
+          ],
+          [
+            "task:68b16354:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 3,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            1,
+            4,
+            7,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            3,
+            2,
+            8,
+            4,
+            1,
+            8,
+            4
+          ],
+          [
+            4,
+            1,
+            1,
+            1,
+            7,
+            8,
+            4
+          ],
+          [
+            1,
+            1,
+            2,
+            3,
+            8,
+            1,
+            3
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            4,
+            7,
+            3
+          ],
+          [
+            4,
+            4,
+            1,
+            1,
+            4,
+            3,
+            4
+          ],
+          [
+            2,
+            8,
+            1,
+            3,
+            2,
+            4,
+            1
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "2901de53-b7de-420c-8432-d798102e4959",
+          "hypothesis_id": "68b16354:32ae3e5c2ef3",
+          "execution_id": "8621bb29-ab5f-4774-9f9a-3b0b4fab45fa",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "68b16354:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "68b16354:belief:0",
+          "observation_id": "68b16354:train:0"
+        },
+        {
+          "belief_id": "68b16354:belief:1",
+          "observation_id": "68b16354:train:1"
+        },
+        {
+          "belief_id": "68b16354:belief:2",
+          "observation_id": "68b16354:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "694f12f3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6a1e5592",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6aa20dc0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6b9890af",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6c434453",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6cdd2623",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6cf79266",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6d0160f0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6d0aefbc",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6d58a25d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6d75e8bb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6e02f1e3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6e19193c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6e82a1ae",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6ecd11f4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6f8cd79b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "6fa7a44f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "72322fa7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "72ca375d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "73251a56",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7447852a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7468f01a",
+      "solved": true,
+      "program": "Application(operator='flip_horizontal', arguments=(Application(operator='crop', arguments=(Variable(name='g', sort='Grid'),)),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:7468f01a:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "177"
+          ],
+          [
+            "task:7468f01a:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 37,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            1,
+            1,
+            1,
+            8,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            8,
+            8,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            8,
+            8,
+            8
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            8,
+            8,
+            8,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "109f1875-8709-4e44-bfdc-fbf92a42716d",
+          "hypothesis_id": "7468f01a:0744fbfedbd8",
+          "execution_id": "52e3fd5d-c0b8-42f0-aa03-60f43e17ae5d",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "7468f01a:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "7468f01a:belief:0",
+          "observation_id": "7468f01a:train:0"
+        },
+        {
+          "belief_id": "7468f01a:belief:1",
+          "observation_id": "7468f01a:train:1"
+        },
+        {
+          "belief_id": "7468f01a:belief:2",
+          "observation_id": "7468f01a:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "746b3537",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "74dd1130",
+      "solved": true,
+      "program": "Application(operator='transpose', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:74dd1130:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "179"
+          ],
+          [
+            "task:74dd1130:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 7,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            9,
+            9,
+            9
+          ],
+          [
+            3,
+            4,
+            3
+          ],
+          [
+            4,
+            4,
+            4
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "8a610ddc-7ca2-47a8-a561-a917e1c28b9c",
+          "hypothesis_id": "74dd1130:02a4d1da1c19",
+          "execution_id": "57112ee1-7b96-436c-b74d-6b80913f8b48",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "74dd1130:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "74dd1130:belief:0",
+          "observation_id": "74dd1130:train:0"
+        },
+        {
+          "belief_id": "74dd1130:belief:1",
+          "observation_id": "74dd1130:train:1"
+        },
+        {
+          "belief_id": "74dd1130:belief:2",
+          "observation_id": "74dd1130:train:2"
+        },
+        {
+          "belief_id": "74dd1130:belief:3",
+          "observation_id": "74dd1130:train:3"
+        }
+      ]
+    },
+    {
+      "task_id": "75b8110e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "760b3cac",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "776ffc46",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "77fdfe62",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "780d0b14",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7837ac64",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "794b24be",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7b6016b9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7b7f7511",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7c008303",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7ddcd7ec",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7df24a62",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7e0986d6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7f4411dc",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "7fe24cdd",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "80af3007",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "810b9b61",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "82819916",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "83302e8f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "834ec97d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8403a5d5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "846bdb03",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "855e0971",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "85c4e7cd",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "868de0fa",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8731374e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "88a10436",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "88a62173",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "890034e9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8a004b2b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8be77c9e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8d5021e8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8d510a79",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8e1813be",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8e5a5113",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8eb1be9a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8efcae92",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "8f2ea7aa",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "90c28cc7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "90f3ed37",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "913fb3ed",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "91413438",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "91714a58",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9172f3a0",
+      "solved": true,
+      "program": "Application(operator='upscale_3', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:9172f3a0:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "223"
+          ],
+          [
+            "task:9172f3a0:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 11,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            6,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            6,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            6,
+            6
+          ],
+          [
+            6,
+            6,
+            6,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            6,
+            6,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            6,
+            6,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "d1099b18-1d2a-4e6f-84af-9d0529abca4b",
+          "hypothesis_id": "9172f3a0:b3ef1cc2ba98",
+          "execution_id": "581bf852-6c47-4fdf-a6be-8ef99141086d",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "9172f3a0:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "9172f3a0:belief:0",
+          "observation_id": "9172f3a0:train:0"
+        },
+        {
+          "belief_id": "9172f3a0:belief:1",
+          "observation_id": "9172f3a0:train:1"
+        }
+      ]
+    },
+    {
+      "task_id": "928ad970",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "93b581b8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "941d9a10",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "94f9d214",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "952a094c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9565186b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "95990924",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "963e52fc",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "97999447",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "97a05b5b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "98cf29f8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "995c5fa3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "99b1bc43",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "99fa7670",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9aec4887",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9af7a82c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9d9215db",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9dfd6313",
+      "solved": true,
+      "program": "Application(operator='transpose', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:9dfd6313:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "241"
+          ],
+          [
+            "task:9dfd6313:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 7,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            5,
+            0,
+            3,
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            5,
+            3,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            0,
+            8,
+            6
+          ],
+          [
+            0,
+            0,
+            0,
+            5,
+            8,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            5
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "a4b6bf30-065f-416a-94b0-4fd590e23f49",
+          "hypothesis_id": "9dfd6313:02a4d1da1c19",
+          "execution_id": "d02f4a4c-b37d-42f5-bd8e-2f014c721ffe",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "9dfd6313:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "9dfd6313:belief:0",
+          "observation_id": "9dfd6313:train:0"
+        },
+        {
+          "belief_id": "9dfd6313:belief:1",
+          "observation_id": "9dfd6313:train:1"
+        },
+        {
+          "belief_id": "9dfd6313:belief:2",
+          "observation_id": "9dfd6313:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "9ecd008a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9edfc990",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "9f236235",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a1570a43",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a2fd1cf0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a3325580",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a3df8b1e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a416b8f3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a48eeaf7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a5313dff",
+      "solved": true,
+      "program": "Application(operator='fill_holes_1', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:a5313dff:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "251"
+          ],
+          [
+            "task:a5313dff:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 18,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            2,
+            2,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "5df8bb02-5454-4dc9-ae6b-57b7f93e019a",
+          "hypothesis_id": "a5313dff:5b2a4371a5e6",
+          "execution_id": "cc5208b4-95bf-4245-9e91-246760e1afd7",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "a5313dff:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "a5313dff:belief:0",
+          "observation_id": "a5313dff:train:0"
+        },
+        {
+          "belief_id": "a5313dff:belief:1",
+          "observation_id": "a5313dff:train:1"
+        },
+        {
+          "belief_id": "a5313dff:belief:2",
+          "observation_id": "a5313dff:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "a5f85a15",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a61ba2ce",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a61f2674",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a64e4611",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a65b410d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a68b268e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a699fb00",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a740d043",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a78176bb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a79310a0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a85d4709",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a87f7484",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a8c38be5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a8d7556c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "a9f96cdd",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "aabf363d",
+      "solved": false,
+      "program": "Application(operator='task_recolor', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:aabf363d:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "267"
+          ],
+          [
+            "task:aabf363d:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 30,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            8,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            8,
+            8,
+            8,
+            8,
+            8,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            8,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            8,
+            8,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            8,
+            8,
+            8,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "dab8473d-457b-4f28-bc20-9a273de03216",
+          "hypothesis_id": "aabf363d:0c49cabe9a7b",
+          "execution_id": "f4285382-9b61-4faa-b9ab-b159a1ef501a",
+          "status": "refuted",
+          "supporting_observation_ids": [],
+          "counterexample_ids": [
+            "aabf363d:test:0"
+          ]
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "aabf363d:belief:0",
+          "observation_id": "aabf363d:train:0"
+        },
+        {
+          "belief_id": "aabf363d:belief:1",
+          "observation_id": "aabf363d:train:1"
+        }
+      ]
+    },
+    {
+      "task_id": "aba27056",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ac0a08a4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ae3edfdc",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ae4f1146",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "aedd82e4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "af902bf9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b0c4d837",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b190f7f5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b1948b0a",
+      "solved": true,
+      "program": "Application(operator='task_recolor', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:b1948b0a:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "276"
+          ],
+          [
+            "task:b1948b0a:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 30,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            2,
+            7,
+            7,
+            2
+          ],
+          [
+            2,
+            7,
+            2,
+            7
+          ],
+          [
+            7,
+            7,
+            7,
+            2
+          ],
+          [
+            7,
+            2,
+            7,
+            2
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "3e8dc007-7690-488e-96db-6d2d128cd91e",
+          "hypothesis_id": "b1948b0a:0c49cabe9a7b",
+          "execution_id": "41fa72e4-36af-4427-9257-936d4a931ec8",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "b1948b0a:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "b1948b0a:belief:0",
+          "observation_id": "b1948b0a:train:0"
+        },
+        {
+          "belief_id": "b1948b0a:belief:1",
+          "observation_id": "b1948b0a:train:1"
+        },
+        {
+          "belief_id": "b1948b0a:belief:2",
+          "observation_id": "b1948b0a:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "b230c067",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b27ca6d3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b2862040",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b527c5c6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b548a754",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b60334d2",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b6afb2da",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b7249182",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b775ac94",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b782dc8a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b8825c91",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b8cdaf2b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b91ae062",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b94a9452",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "b9b7f026",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ba26e723",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ba97ae07",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "bb43febb",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "bbc9ae5d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "bc1d5164",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "bd4472b8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "bda2d7a6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "bdad9b1f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "be94b721",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "beb8660c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c0f76784",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c1d99e64",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c3e719e8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c3f564a4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c444b776",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c59eb873",
+      "solved": true,
+      "program": "Application(operator='upscale_2', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:c59eb873:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "307"
+          ],
+          [
+            "task:c59eb873:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 10,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            7,
+            7,
+            8,
+            8
+          ],
+          [
+            2,
+            2,
+            0,
+            0,
+            0,
+            0,
+            7,
+            7,
+            8,
+            8
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            5,
+            6,
+            6,
+            6,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            5,
+            6,
+            6,
+            6,
+            6,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            5,
+            5,
+            6,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            5,
+            5,
+            6,
+            6,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            5,
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "36e5865e-f906-4aa8-9aea-f5328a960771",
+          "hypothesis_id": "c59eb873:8df24c365766",
+          "execution_id": "acfaa514-08d2-4548-85bb-78149f880adf",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "c59eb873:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "c59eb873:belief:0",
+          "observation_id": "c59eb873:train:0"
+        },
+        {
+          "belief_id": "c59eb873:belief:1",
+          "observation_id": "c59eb873:train:1"
+        },
+        {
+          "belief_id": "c59eb873:belief:2",
+          "observation_id": "c59eb873:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "c8cbb738",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c8f0f002",
+      "solved": true,
+      "program": "Application(operator='task_recolor', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:c8f0f002:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "309"
+          ],
+          [
+            "task:c8f0f002:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 30,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            1,
+            5,
+            5,
+            1,
+            5
+          ],
+          [
+            8,
+            1,
+            5,
+            5,
+            5
+          ],
+          [
+            8,
+            5,
+            1,
+            5,
+            8
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "76f531b4-578a-4ca5-beae-d8196dac6303",
+          "hypothesis_id": "c8f0f002:0c49cabe9a7b",
+          "execution_id": "fe4cc5a7-e87e-492d-a898-4e575db7c65e",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "c8f0f002:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "c8f0f002:belief:0",
+          "observation_id": "c8f0f002:train:0"
+        },
+        {
+          "belief_id": "c8f0f002:belief:1",
+          "observation_id": "c8f0f002:train:1"
+        },
+        {
+          "belief_id": "c8f0f002:belief:2",
+          "observation_id": "c8f0f002:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "c909285e",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c9e6f938",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "c9f8e694",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "caa06a1f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "cbded52d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "cce03e0d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "cdecee7f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ce22a75a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ce4f8723",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ce602527",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ce9e57f2",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "cf98881b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d037b0a7",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d06dbe63",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d07ae81c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d0f5fe59",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d10ecb37",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d13f3404",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d22278a0",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d23f8c26",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d2abd087",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d364b489",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d406998b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d43fd935",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d4469b4b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d4a91cb9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d4f3cd78",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d511f180",
+      "solved": true,
+      "program": "Application(operator='task_recolor', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:d511f180:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "337"
+          ],
+          [
+            "task:d511f180:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 30,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            5,
+            5,
+            4,
+            8
+          ],
+          [
+            3,
+            5,
+            7,
+            8
+          ],
+          [
+            3,
+            7,
+            1,
+            9
+          ],
+          [
+            6,
+            4,
+            5,
+            5
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "0f164316-de0f-42cf-8fb2-86a58878f844",
+          "hypothesis_id": "d511f180:0c49cabe9a7b",
+          "execution_id": "3553ad34-f070-480c-b79f-46155e8d79b8",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "d511f180:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "d511f180:belief:0",
+          "observation_id": "d511f180:train:0"
+        },
+        {
+          "belief_id": "d511f180:belief:1",
+          "observation_id": "d511f180:train:1"
+        },
+        {
+          "belief_id": "d511f180:belief:2",
+          "observation_id": "d511f180:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "d5d6de2d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d631b094",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d687bc17",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d6ad076f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d89b689b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d8c310e9",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d90796e8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d9f24cd1",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "d9fac9be",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "dae9d2b5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "db3e9e38",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "db93a21d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "dbc1a6ce",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "dc0a314f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "dc1df850",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "dc433765",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ddf7fa4f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "de1cd16c",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ded97339",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e179c5f4",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e21d9049",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e26a3af2",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e3497940",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e40b9e2f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e48d4e1a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e5062a87",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e509e548",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e50d258f",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e6721834",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e73095fd",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e76a88a6",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e8593010",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e8dc4411",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e9614598",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e98196ab",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "e9afcf9a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ea32f347",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ea786f4a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "eb281b96",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "eb5a1d5d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ec883f72",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ecdecbb3",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ed36ccf7",
+      "solved": true,
+      "program": "Application(operator='rotate_270', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:ed36ccf7:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "380"
+          ],
+          [
+            "task:ed36ccf7:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 6,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            0,
+            5
+          ],
+          [
+            0,
+            5,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "afe488cc-40b5-43f8-ae21-214563b02346",
+          "hypothesis_id": "ed36ccf7:de2e51a396c3",
+          "execution_id": "06718454-1343-48a0-8c58-89efd0a688dd",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "ed36ccf7:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "ed36ccf7:belief:0",
+          "observation_id": "ed36ccf7:train:0"
+        },
+        {
+          "belief_id": "ed36ccf7:belief:1",
+          "observation_id": "ed36ccf7:train:1"
+        },
+        {
+          "belief_id": "ed36ccf7:belief:2",
+          "observation_id": "ed36ccf7:train:2"
+        },
+        {
+          "belief_id": "ed36ccf7:belief:3",
+          "observation_id": "ed36ccf7:train:3"
+        }
+      ]
+    },
+    {
+      "task_id": "ef135b50",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f15e1fac",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f1cefba8",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f25fbde4",
+      "solved": true,
+      "program": "Application(operator='crop', arguments=(Application(operator='upscale_2', arguments=(Variable(name='g', sort='Grid'),)),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:f25fbde4:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "384"
+          ],
+          [
+            "task:f25fbde4:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 234,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            0,
+            0,
+            4,
+            4,
+            0,
+            0,
+            4,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            4,
+            0,
+            0,
+            4,
+            4,
+            0,
+            0
+          ],
+          [
+            4,
+            4,
+            0,
+            0,
+            4,
+            4,
+            0,
+            0,
+            4,
+            4
+          ],
+          [
+            4,
+            4,
+            0,
+            0,
+            4,
+            4,
+            0,
+            0,
+            4,
+            4
+          ],
+          [
+            0,
+            0,
+            4,
+            4,
+            0,
+            0,
+            4,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            4,
+            4,
+            0,
+            0,
+            4,
+            4,
+            0,
+            0
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "9e9de132-84cc-491a-b3ef-22d524eff140",
+          "hypothesis_id": "f25fbde4:5d422ab8c572",
+          "execution_id": "717f4bbd-cc26-4758-a05e-7a92d856c164",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "f25fbde4:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "f25fbde4:belief:0",
+          "observation_id": "f25fbde4:train:0"
+        },
+        {
+          "belief_id": "f25fbde4:belief:1",
+          "observation_id": "f25fbde4:train:1"
+        },
+        {
+          "belief_id": "f25fbde4:belief:2",
+          "observation_id": "f25fbde4:train:2"
+        }
+      ]
+    },
+    {
+      "task_id": "f25ffba3",
+      "solved": true,
+      "program": "Application(operator='complete_horizontal', arguments=(Variable(name='g', sort='Grid'),))",
+      "scope": "flat",
+      "language": {
+        "id": "task:f25ffba3:flat",
+        "version": "1",
+        "lineage": [
+          [
+            "grid",
+            "1"
+          ],
+          [
+            "geometry",
+            "1"
+          ],
+          [
+            "symmetry",
+            "1"
+          ],
+          [
+            "topology",
+            "1"
+          ],
+          [
+            "objects",
+            "1"
+          ],
+          [
+            "object_selection",
+            "1"
+          ],
+          [
+            "object_geometry",
+            "1"
+          ],
+          [
+            "flat",
+            "385"
+          ],
+          [
+            "task:f25ffba3:flat",
+            "1"
+          ]
+        ]
+      },
+      "candidates": 14,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [
+        [
+          [
+            7,
+            1,
+            4,
+            4
+          ],
+          [
+            7,
+            1,
+            3,
+            3
+          ],
+          [
+            7,
+            1,
+            3,
+            0
+          ],
+          [
+            7,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            7,
+            1,
+            0,
+            0
+          ],
+          [
+            7,
+            1,
+            3,
+            0
+          ],
+          [
+            7,
+            1,
+            3,
+            3
+          ],
+          [
+            7,
+            1,
+            4,
+            4
+          ]
+        ]
+      ],
+      "validations": [
+        {
+          "id": "c84b6fbb-8b2d-4780-add3-4ccf44d3b14d",
+          "hypothesis_id": "f25ffba3:5c8bd48fa712",
+          "execution_id": "a480fa75-592e-4f8e-9127-98cd31098c8f",
+          "status": "corroborated",
+          "supporting_observation_ids": [
+            "f25ffba3:test:0"
+          ],
+          "counterexample_ids": []
+        }
+      ],
+      "training_evidence": [
+        {
+          "belief_id": "f25ffba3:belief:0",
+          "observation_id": "f25ffba3:train:0"
+        },
+        {
+          "belief_id": "f25ffba3:belief:1",
+          "observation_id": "f25ffba3:train:1"
+        }
+      ]
+    },
+    {
+      "task_id": "f2829549",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f35d900a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f5b8619d",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f76d97a5",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f8a8fe49",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f8b3ba0a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f8c80d96",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f8ff0b80",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "f9012d9b",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "fafffa47",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "fcb5c309",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "fcc82909",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "feca6190",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ff28f65a",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    },
+    {
+      "task_id": "ff805c23",
+      "solved": false,
+      "program": "None",
+      "scope": null,
+      "language": null,
+      "candidates": 5000,
+      "attempted_scopes": [
+        "flat"
+      ],
+      "reused": [],
+      "predictions": [],
+      "validations": []
+    }
+  ]
+}

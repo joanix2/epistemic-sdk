@@ -31,8 +31,9 @@ Sensor → Observation → BeliefGraph → InferenceEngine → Hypothesis
 
 ## État réel
 
-- Le dépôt contient **les interfaces** (`dataclass(frozen=True)` + `typing.Protocol`), un exemple M2 (`examples/nat_language.py`) et des tests de contrats (`tests/test_contracts.py`).
-- **Aucun moteur n'est implémenté** : pas d'interpréteur Maude, de synthèse, d'exécuteur ni de solveur. Les `Protocol` sont des ports remplaçables, pas des implémentations.
+Les contrats sont accompagnés d'algorithmes d'interprétation finie, réécriture bornée, synthèse, validation et sélection d'expériences. La réflexion Maude reste un port non implémenté.
+
+L'expérience ARC ajoute une taxonomie interne de langages M2 : un graphe de versions immuables, des spécialisations par tâche, des opérateurs typés sur grilles/objets et des définitions apprises réutilisables. Les réponses de test ne participent pas à la sélection des programmes. Voir ADR-007, `TECHNICAL.md` et `docs/experiments/arc-taxonomy/REPORT.md`. Cette expérience ne valide pas encore la boucle complète de révision des connaissances ni une découverte autonome de la taxonomie.
 
 ## Invariants
 

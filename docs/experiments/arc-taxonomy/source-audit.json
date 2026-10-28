@@ -1,0 +1,8 @@
+{
+  "executed_source_sha256": "6b3682cabbb4f4655c94019b1f3bdeb3d28ad6c911333f0917a23af1e8a9ddbc",
+  "final_source_sha256": "fb312f0f4d9f44be44abd9f3d3f795599d1bfa31159095a35701c364ad458b48",
+  "executed_ast_sha256": "8c8f6850aa3144cf39b9bae0c637b68890172195d27fb23650e6845e6085693a",
+  "final_ast_sha256": "8c8f6850aa3144cf39b9bae0c637b68890172195d27fb23650e6845e6085693a",
+  "post_benchmark_change": "Removed a trailing blank line in examples/arc/transformations.py; AST unchanged. No solver behavior changed after evaluation.",
+  "dataset_commit": "399030444e0ab0cc8b4e199870fb20b863846f34"
+}

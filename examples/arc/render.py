@@ -69,10 +69,12 @@ def main() -> int:
     parser.add_argument("--scope", help="keep only tasks solved in this scope family")
     parser.add_argument("--failed", action="store_true", help="show failed tasks instead")
     parser.add_argument("--limit", type=int, default=30)
+    parser.add_argument("--task", help="keep only this task id")
     args = parser.parse_args()
     report = json.loads(args.report.read_text())
     rows = [row for row in report["tasks"]
-            if row["solved"] != args.failed and (not args.scope or row["scope"] == args.scope)]
+            if row["solved"] != args.failed and (not args.scope or row["scope"] == args.scope)
+            and (not args.task or row["task_id"] == args.task)]
     sections = [render_task(load_task(args.data_dir / f"{row['task_id']}.json"), row)
                 for row in rows[:args.limit]]
     title = f"{report['mode']}: {report['solved']}/{report['total']} ({len(rows)} matching)"

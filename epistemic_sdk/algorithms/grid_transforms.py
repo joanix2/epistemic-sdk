@@ -128,6 +128,16 @@ def half(grid: Grid, part: str) -> Grid:
     return Grid(tuple(row[columns] for row in grid.cells[rows]))
 
 
+def window(grid: Grid, anchor: str) -> Grid:
+    """Sensor: square view of side min(height, width) at the start or end of the long axis."""
+    side = min(grid.height, grid.width)
+    if anchor == "start":
+        top, left = 0, 0
+    else:
+        top, left = grid.height - side, grid.width - side
+    return Grid(tuple(row[left:left + side] for row in grid.cells[top:top + side]))
+
+
 def gravity(grid: Grid, direction: str) -> Grid:
     """Slide non-zero cells toward a side line by line, keeping their order."""
     if direction in ("up", "down"):
